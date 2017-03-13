@@ -14,22 +14,22 @@ class DaysToCountViewController: UIViewController {
         print("Monday switch is \(sender.isOn)")
     }
     @IBAction func switchTuesdayChanged(sender: UISwitch) {
-        print("Monday switch is \(sender.isOn)")
+        print("Tuesday switch is \(sender.isOn)")
     }
     @IBAction func switchWednesdayChanged(sender: UISwitch) {
-        print("Monday switch is \(sender.isOn)")
+        print("Wednesday switch is \(sender.isOn)")
     }
     @IBAction func switchThursdayChanged(sender: UISwitch) {
-        print("Monday switch is \(sender.isOn)")
+        print("Thursday switch is \(sender.isOn)")
     }
     @IBAction func switchFridayChanged(sender: UISwitch) {
-        print("Monday switch is \(sender.isOn)")
+        print("Friday switch is \(sender.isOn)")
     }
     @IBAction func switchSaturdayChanged(sender: UISwitch) {
-        print("Monday switch is \(sender.isOn)")
+        print("Saturday switch is \(sender.isOn)")
     }
     @IBAction func switchSundayChanged(sender: UISwitch) {
-        print("Monday switch is \(sender.isOn)")
+        print("Sunday switch is \(sender.isOn)")
     }
 
 }

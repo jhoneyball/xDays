@@ -22,43 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QgF-jj-Kh6">
-                                <rect key="frame" x="16" y="73" width="343" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="511019230.01937401">
-                                    <!--2017-03-12 13:47:10 +0000-->
-                                </date>
-                                <connections>
-                                    <action selector="updateDateWithSender:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nd8-xr-5hE"/>
-                                </connections>
-                            </datePicker>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3d-Ib-S7f" userLabel="Customisation View">
-                                <rect key="frame" x="67" y="297" width="242" height="87"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmZ-1u-sIi">
-                                        <rect key="frame" x="67" y="8" width="108" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="Days to count..."/>
-                                        <connections>
-                                            <segue destination="lRD-z5-vTZ" kind="show" id="1Ty-0y-COM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nax-91-wNv">
-                                        <rect key="frame" x="60" y="46" width="122" height="30"/>
-                                        <state key="normal" title="Exception dates..."/>
-                                        <connections>
-                                            <segue destination="uFf-VA-8TZ" kind="show" id="1GG-89-5DT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="Nax-91-wNv" firstAttribute="centerX" secondItem="TmZ-1u-sIi" secondAttribute="centerX" id="95r-Ne-k21"/>
-                                    <constraint firstItem="TmZ-1u-sIi" firstAttribute="centerX" secondItem="O3d-Ib-S7f" secondAttribute="centerX" id="EPL-X6-5rf"/>
-                                    <constraint firstItem="TmZ-1u-sIi" firstAttribute="top" secondItem="O3d-Ib-S7f" secondAttribute="topMargin" id="PgY-AY-X2m"/>
-                                    <constraint firstItem="TmZ-1u-sIi" firstAttribute="centerX" secondItem="O3d-Ib-S7f" secondAttribute="centerX" id="iDz-3i-pig"/>
-                                    <constraint firstItem="Nax-91-wNv" firstAttribute="top" secondItem="TmZ-1u-sIi" secondAttribute="bottom" constant="8" symbolic="YES" id="ppE-9J-5L8"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7zI-6T-ETn" userLabel="Days Until View">
                                 <rect key="frame" x="67" y="20" width="240" height="65"/>
                                 <subviews>
@@ -77,17 +40,42 @@
                                     <constraint firstAttribute="width" constant="240" id="n8g-DS-pyN"/>
                                 </constraints>
                             </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QgF-jj-Kh6">
+                                <rect key="frame" x="16" y="73" width="343" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="511019230.01937401">
+                                    <!--2017-03-12 13:47:10 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="updateDateWithSender:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="Nd8-xr-5hE"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmZ-1u-sIi">
+                                <rect key="frame" x="133" y="297" width="108" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Days to count..."/>
+                                <connections>
+                                    <segue destination="lRD-z5-vTZ" kind="show" id="U5a-RP-bh3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nax-91-wNv">
+                                <rect key="frame" x="126" y="335" width="122" height="30"/>
+                                <state key="normal" title="Exception dates..."/>
+                                <connections>
+                                    <segue destination="uFf-VA-8TZ" kind="show" id="HY5-LK-6rq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QgF-jj-Kh6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="3ek-um-14Q"/>
-                            <constraint firstItem="QgF-jj-Kh6" firstAttribute="centerX" secondItem="O3d-Ib-S7f" secondAttribute="centerX" id="AIg-My-MAN"/>
+                            <constraint firstItem="TmZ-1u-sIi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kb-eq-4bU"/>
+                            <constraint firstItem="TmZ-1u-sIi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CIO-qy-2Ha"/>
                             <constraint firstItem="QgF-jj-Kh6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DBY-TZ-Hdt"/>
-                            <constraint firstItem="O3d-Ib-S7f" firstAttribute="top" secondItem="QgF-jj-Kh6" secondAttribute="bottom" constant="8" symbolic="YES" id="JFb-8I-duK"/>
+                            <constraint firstItem="TmZ-1u-sIi" firstAttribute="top" secondItem="QgF-jj-Kh6" secondAttribute="bottom" constant="8" symbolic="YES" id="FcY-11-2Bv"/>
+                            <constraint firstItem="TmZ-1u-sIi" firstAttribute="centerX" secondItem="Nax-91-wNv" secondAttribute="centerX" id="VZr-Z9-Lsy"/>
                             <constraint firstItem="QgF-jj-Kh6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YWF-Ex-ozG"/>
+                            <constraint firstItem="Nax-91-wNv" firstAttribute="top" secondItem="TmZ-1u-sIi" secondAttribute="bottom" constant="8" symbolic="YES" id="Zsr-uD-qrT"/>
                             <constraint firstItem="7zI-6T-ETn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bgA-fV-hZP"/>
-                            <constraint firstItem="7zI-6T-ETn" firstAttribute="leading" secondItem="O3d-Ib-S7f" secondAttribute="leading" id="dvZ-pm-QQZ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O3d-Ib-S7f" secondAttribute="bottom" constant="283" id="q2i-Ek-o2Z"/>
                             <constraint firstItem="7zI-6T-ETn" firstAttribute="centerX" secondItem="QgF-jj-Kh6" secondAttribute="centerX" id="zOr-S0-RwJ"/>
                         </constraints>
                     </view>
@@ -121,157 +109,140 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select which days to count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dw-n1-AcB">
                                 <rect key="frame" x="16" y="28" width="241" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="241" id="JO4-VE-iIM"/>
+                                    <constraint firstAttribute="width" constant="241" id="a9s-p5-iT1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szb-hh-cnI">
-                                <rect key="frame" x="16" y="57" width="240" height="300"/>
-                                <subviews>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NSl-Xw-eHF">
-                                        <rect key="frame" x="0.0" y="8" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="switchMondayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="ybD-c7-Kc7"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqJ-Kk-fPD">
-                                        <rect key="frame" x="57" y="13" width="175" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0b-8V-nsJ">
-                                        <rect key="frame" x="0.0" y="47" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="switchTuesdayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="kPB-f7-AN3"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-MZ-AUy">
-                                        <rect key="frame" x="57" y="52" width="175" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eu-Bj-9O7">
-                                        <rect key="frame" x="0.0" y="86" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="switchWednesdayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="iw0-lr-TfN"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tj-pB-P5E">
-                                        <rect key="frame" x="57" y="91" width="175" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0p-kf-LLp">
-                                        <rect key="frame" x="0.0" y="125" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="switchThursdayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="Zd1-AV-0bp"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FI0-T2-h1T">
-                                        <rect key="frame" x="57" y="130" width="175" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bwd-Ki-uH5">
-                                        <rect key="frame" x="0.0" y="164" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="switchFridayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="fpb-Dv-YmI"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3m-aO-LcZ">
-                                        <rect key="frame" x="57" y="169" width="175" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIY-EJ-bpL">
-                                        <rect key="frame" x="0.0" y="203" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="switchSaturdayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="VgB-Op-Crb"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-Gg-R3p">
-                                        <rect key="frame" x="57" y="208" width="175" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iG-hY-dZz">
-                                        <rect key="frame" x="0.0" y="242" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="switchSundayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="l1Q-Bd-lzH"/>
-                                        </connections>
-                                    </switch>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="app-ZE-Ztn">
-                                        <rect key="frame" x="57" y="247" width="175" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RD-jp-C8c">
+                                <rect key="frame" x="16" y="57" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchMondayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="rjh-ih-dnH"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5nc-gg-V7z">
+                                <rect key="frame" x="73" y="62" width="175" height="21"/>
                                 <constraints>
-                                    <constraint firstItem="FI0-T2-h1T" firstAttribute="leading" secondItem="S0p-kf-LLp" secondAttribute="trailing" constant="8" id="0cS-i7-Kc5"/>
-                                    <constraint firstItem="FI0-T2-h1T" firstAttribute="leading" secondItem="S0p-kf-LLp" secondAttribute="trailing" constant="8" id="1jI-Bv-IW9"/>
-                                    <constraint firstItem="2eu-Bj-9O7" firstAttribute="top" secondItem="O0b-8V-nsJ" secondAttribute="bottom" constant="8" symbolic="YES" id="2S3-Qj-QIf"/>
-                                    <constraint firstItem="app-ZE-Ztn" firstAttribute="centerY" secondItem="8iG-hY-dZz" secondAttribute="centerY" id="4ff-LE-SMC"/>
-                                    <constraint firstItem="uBH-MZ-AUy" firstAttribute="trailing" secondItem="2Tj-pB-P5E" secondAttribute="trailing" id="50Q-Gj-Wr1"/>
-                                    <constraint firstItem="2Tj-pB-P5E" firstAttribute="centerY" secondItem="2eu-Bj-9O7" secondAttribute="centerY" id="5Up-x0-3C4"/>
-                                    <constraint firstItem="wqJ-Kk-fPD" firstAttribute="centerY" secondItem="NSl-Xw-eHF" secondAttribute="centerY" id="5yw-JG-l9D"/>
-                                    <constraint firstItem="MIY-EJ-bpL" firstAttribute="top" secondItem="bwd-Ki-uH5" secondAttribute="bottom" constant="8" symbolic="YES" id="6iD-xw-zkO"/>
-                                    <constraint firstItem="app-ZE-Ztn" firstAttribute="leading" secondItem="8iG-hY-dZz" secondAttribute="trailing" constant="8" id="72h-vW-WWj"/>
-                                    <constraint firstItem="O0b-8V-nsJ" firstAttribute="top" secondItem="NSl-Xw-eHF" secondAttribute="bottom" constant="8" symbolic="YES" id="9Dd-pW-FcI"/>
-                                    <constraint firstItem="uBH-MZ-AUy" firstAttribute="leading" secondItem="2Tj-pB-P5E" secondAttribute="leading" id="BJY-uO-gcV"/>
-                                    <constraint firstItem="2Tj-pB-P5E" firstAttribute="trailing" secondItem="FI0-T2-h1T" secondAttribute="trailing" id="C4I-qo-gaU"/>
-                                    <constraint firstItem="wqJ-Kk-fPD" firstAttribute="trailing" secondItem="Szb-hh-cnI" secondAttribute="trailingMargin" id="CMq-wE-eai"/>
-                                    <constraint firstItem="uBH-MZ-AUy" firstAttribute="centerY" secondItem="O0b-8V-nsJ" secondAttribute="centerY" id="EWK-xf-JMU"/>
-                                    <constraint firstItem="A3m-aO-LcZ" firstAttribute="leading" secondItem="bwd-Ki-uH5" secondAttribute="trailing" constant="8" id="Fus-rv-yRQ"/>
-                                    <constraint firstItem="A3m-aO-LcZ" firstAttribute="trailing" secondItem="3hl-Gg-R3p" secondAttribute="trailing" id="GjP-fX-nHF"/>
-                                    <constraint firstItem="wqJ-Kk-fPD" firstAttribute="trailing" secondItem="uBH-MZ-AUy" secondAttribute="trailing" id="HZ4-6t-FbU"/>
-                                    <constraint firstItem="wqJ-Kk-fPD" firstAttribute="leading" secondItem="NSl-Xw-eHF" secondAttribute="trailing" constant="8" id="MSl-Yu-taR"/>
-                                    <constraint firstItem="S0p-kf-LLp" firstAttribute="top" secondItem="2eu-Bj-9O7" secondAttribute="bottom" constant="8" symbolic="YES" id="Q53-iA-hMn"/>
-                                    <constraint firstItem="A3m-aO-LcZ" firstAttribute="centerY" secondItem="bwd-Ki-uH5" secondAttribute="centerY" id="Qbg-6u-M5W"/>
-                                    <constraint firstItem="A3m-aO-LcZ" firstAttribute="leading" secondItem="bwd-Ki-uH5" secondAttribute="trailing" constant="8" id="Qx0-7b-cEg"/>
-                                    <constraint firstItem="2Tj-pB-P5E" firstAttribute="leading" secondItem="2eu-Bj-9O7" secondAttribute="trailing" constant="8" id="S3I-Jr-cq0"/>
-                                    <constraint firstItem="uBH-MZ-AUy" firstAttribute="leading" secondItem="O0b-8V-nsJ" secondAttribute="trailing" constant="8" id="Vyy-TR-3eL"/>
-                                    <constraint firstItem="A3m-aO-LcZ" firstAttribute="leading" secondItem="3hl-Gg-R3p" secondAttribute="leading" id="WPT-Ah-ZHU"/>
-                                    <constraint firstItem="3hl-Gg-R3p" firstAttribute="centerY" secondItem="MIY-EJ-bpL" secondAttribute="centerY" id="ZIL-yf-zYA"/>
-                                    <constraint firstItem="wqJ-Kk-fPD" firstAttribute="leading" secondItem="NSl-Xw-eHF" secondAttribute="trailing" constant="8" id="cHl-ak-lpr"/>
-                                    <constraint firstItem="FI0-T2-h1T" firstAttribute="centerY" secondItem="S0p-kf-LLp" secondAttribute="centerY" id="dAE-In-hBN"/>
-                                    <constraint firstItem="3hl-Gg-R3p" firstAttribute="trailing" secondItem="app-ZE-Ztn" secondAttribute="trailing" id="dhM-9S-4bD"/>
-                                    <constraint firstItem="2Tj-pB-P5E" firstAttribute="leading" secondItem="FI0-T2-h1T" secondAttribute="leading" id="h3z-6u-NYn"/>
-                                    <constraint firstItem="uBH-MZ-AUy" firstAttribute="leading" secondItem="O0b-8V-nsJ" secondAttribute="trailing" constant="8" id="h66-H2-tA9"/>
-                                    <constraint firstItem="3hl-Gg-R3p" firstAttribute="leading" secondItem="app-ZE-Ztn" secondAttribute="leading" id="h9i-YH-azT"/>
-                                    <constraint firstItem="bwd-Ki-uH5" firstAttribute="top" secondItem="S0p-kf-LLp" secondAttribute="bottom" constant="8" symbolic="YES" id="hT9-Jt-tWH"/>
-                                    <constraint firstItem="wqJ-Kk-fPD" firstAttribute="leading" secondItem="uBH-MZ-AUy" secondAttribute="leading" id="iIO-sT-UH6"/>
-                                    <constraint firstItem="NSl-Xw-eHF" firstAttribute="top" secondItem="Szb-hh-cnI" secondAttribute="top" constant="8" id="iv5-cH-AAw"/>
-                                    <constraint firstItem="3hl-Gg-R3p" firstAttribute="leading" secondItem="MIY-EJ-bpL" secondAttribute="trailing" constant="8" id="jk9-to-73S"/>
-                                    <constraint firstItem="NSl-Xw-eHF" firstAttribute="leading" secondItem="Szb-hh-cnI" secondAttribute="leading" id="luk-hc-VFv"/>
-                                    <constraint firstItem="app-ZE-Ztn" firstAttribute="leading" secondItem="8iG-hY-dZz" secondAttribute="trailing" constant="8" id="mHw-UJ-fqY"/>
-                                    <constraint firstItem="2Tj-pB-P5E" firstAttribute="leading" secondItem="2eu-Bj-9O7" secondAttribute="trailing" constant="8" id="pQH-Id-xVr"/>
-                                    <constraint firstItem="8iG-hY-dZz" firstAttribute="top" secondItem="MIY-EJ-bpL" secondAttribute="bottom" constant="8" symbolic="YES" id="pXy-FU-0IV"/>
-                                    <constraint firstItem="FI0-T2-h1T" firstAttribute="leading" secondItem="A3m-aO-LcZ" secondAttribute="leading" id="vag-LV-jxb"/>
-                                    <constraint firstItem="3hl-Gg-R3p" firstAttribute="leading" secondItem="MIY-EJ-bpL" secondAttribute="trailing" constant="8" id="xvT-in-LIf"/>
-                                    <constraint firstItem="FI0-T2-h1T" firstAttribute="trailing" secondItem="A3m-aO-LcZ" secondAttribute="trailing" id="ybd-qc-b1D"/>
+                                    <constraint firstAttribute="width" constant="175" id="wMh-tl-EBl"/>
                                 </constraints>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocU-nC-7Qw">
+                                <rect key="frame" x="16" y="96" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchTuesdayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="0wO-lK-3Qs"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzU-V2-VmL">
+                                <rect key="frame" x="73" y="101" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aaq-4y-qdU">
+                                <rect key="frame" x="16" y="135" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchWednesdayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="6et-xF-1fb"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1n-Yb-vJx">
+                                <rect key="frame" x="73" y="140" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="36t-om-Zta">
+                                <rect key="frame" x="16" y="174" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchThursdayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="IT7-Zb-9Tg"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LN-Km-L4s">
+                                <rect key="frame" x="73" y="179" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paP-em-auJ">
+                                <rect key="frame" x="16" y="213" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchFridayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="jFA-8A-pxY"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umh-ud-8Hn">
+                                <rect key="frame" x="73" y="218" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSk-FM-pM1">
+                                <rect key="frame" x="73" y="257" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFQ-fX-bAb">
+                                <rect key="frame" x="73" y="296" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IL8-P3-jRO">
+                                <rect key="frame" x="16" y="252" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchSaturdayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="1yi-nl-xhP"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CBn-Tt-yvk">
+                                <rect key="frame" x="16" y="291" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchSundayChangedWithSender:" destination="lRD-z5-vTZ" eventType="valueChanged" id="TRD-Qs-x4b"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CBn-Tt-yvk" firstAttribute="leading" secondItem="Nzk-Sw-fBS" secondAttribute="leading" id="1BE-B0-Smt"/>
+                            <constraint firstItem="umh-ud-8Hn" firstAttribute="trailing" secondItem="FSk-FM-pM1" secondAttribute="trailing" id="24Y-QD-DAA"/>
+                            <constraint firstItem="ocU-nC-7Qw" firstAttribute="leading" secondItem="Aaq-4y-qdU" secondAttribute="leading" id="37i-2d-ILm"/>
+                            <constraint firstItem="3LN-Km-L4s" firstAttribute="trailing" secondItem="umh-ud-8Hn" secondAttribute="trailing" id="5Kz-hf-x9P"/>
+                            <constraint firstItem="Aaq-4y-qdU" firstAttribute="top" secondItem="ocU-nC-7Qw" secondAttribute="bottom" constant="8" symbolic="YES" id="7GK-ao-dQG"/>
+                            <constraint firstItem="36t-om-Zta" firstAttribute="centerY" secondItem="3LN-Km-L4s" secondAttribute="centerY" id="9hz-b7-5FL"/>
+                            <constraint firstItem="IL8-P3-jRO" firstAttribute="centerY" secondItem="FSk-FM-pM1" secondAttribute="centerY" id="A6a-Fg-vaX"/>
+                            <constraint firstItem="Aaq-4y-qdU" firstAttribute="centerY" secondItem="a1n-Yb-vJx" secondAttribute="centerY" id="En1-pg-Iod"/>
+                            <constraint firstItem="a1n-Yb-vJx" firstAttribute="trailing" secondItem="3LN-Km-L4s" secondAttribute="trailing" id="Exj-ti-YEW"/>
+                            <constraint firstItem="6RD-jp-C8c" firstAttribute="leading" secondItem="ocU-nC-7Qw" secondAttribute="leading" id="Inl-5Z-Xyl"/>
+                            <constraint firstItem="6RD-jp-C8c" firstAttribute="centerY" secondItem="5nc-gg-V7z" secondAttribute="centerY" id="J7Y-Z8-avc"/>
+                            <constraint firstItem="36t-om-Zta" firstAttribute="top" secondItem="Aaq-4y-qdU" secondAttribute="bottom" constant="8" symbolic="YES" id="Jcp-Tf-jEf"/>
+                            <constraint firstItem="paP-em-auJ" firstAttribute="leading" secondItem="IL8-P3-jRO" secondAttribute="leading" id="Kud-Qj-RUD"/>
                             <constraint firstItem="Nzk-Sw-fBS" firstAttribute="leading" secondItem="ZDn-lU-0TI" secondAttribute="leadingMargin" id="L7P-e4-h75"/>
-                            <constraint firstItem="2Dw-n1-AcB" firstAttribute="leading" secondItem="ZDn-lU-0TI" secondAttribute="leadingMargin" id="UPf-n4-xmk"/>
+                            <constraint firstItem="ocU-nC-7Qw" firstAttribute="centerY" secondItem="AzU-V2-VmL" secondAttribute="centerY" id="OTw-Yy-RhS"/>
+                            <constraint firstItem="IL8-P3-jRO" firstAttribute="top" secondItem="paP-em-auJ" secondAttribute="bottom" constant="8" symbolic="YES" id="RGm-rb-Rdh"/>
+                            <constraint firstItem="CBn-Tt-yvk" firstAttribute="centerY" secondItem="TFQ-fX-bAb" secondAttribute="centerY" id="XGp-A2-iCD"/>
+                            <constraint firstItem="FSk-FM-pM1" firstAttribute="trailing" secondItem="TFQ-fX-bAb" secondAttribute="trailing" id="ZZv-ik-OYy"/>
+                            <constraint firstItem="paP-em-auJ" firstAttribute="centerY" secondItem="umh-ud-8Hn" secondAttribute="centerY" id="aVX-XG-huz"/>
                             <constraint firstItem="xxF-k9-8Iq" firstAttribute="top" secondItem="Nzk-Sw-fBS" secondAttribute="bottom" constant="20" id="ari-XD-vXz"/>
-                            <constraint firstAttribute="bottom" secondItem="Szb-hh-cnI" secondAttribute="bottom" constant="310" id="gfN-ZL-rxG"/>
-                            <constraint firstItem="Szb-hh-cnI" firstAttribute="centerX" secondItem="2Dw-n1-AcB" secondAttribute="centerX" id="kDc-Nb-R4l"/>
-                            <constraint firstItem="Szb-hh-cnI" firstAttribute="top" secondItem="2Dw-n1-AcB" secondAttribute="bottom" constant="8" id="oyW-NR-R55"/>
-                            <constraint firstItem="Szb-hh-cnI" firstAttribute="leading" secondItem="2Dw-n1-AcB" secondAttribute="leading" id="q8s-xK-1yM"/>
-                            <constraint firstItem="2Dw-n1-AcB" firstAttribute="top" secondItem="yP8-Yh-w4o" secondAttribute="bottom" constant="8" id="tQh-qa-kU7"/>
+                            <constraint firstItem="36t-om-Zta" firstAttribute="leading" secondItem="paP-em-auJ" secondAttribute="leading" id="bET-pF-b7l"/>
+                            <constraint firstItem="5nc-gg-V7z" firstAttribute="leading" secondItem="AzU-V2-VmL" secondAttribute="leading" id="bju-ut-QhQ"/>
+                            <constraint firstItem="2Dw-n1-AcB" firstAttribute="leading" secondItem="6RD-jp-C8c" secondAttribute="leading" id="gtG-a0-FK4"/>
+                            <constraint firstItem="5nc-gg-V7z" firstAttribute="trailing" secondItem="AzU-V2-VmL" secondAttribute="trailing" id="hVb-L7-8lc"/>
+                            <constraint firstItem="AzU-V2-VmL" firstAttribute="leading" secondItem="a1n-Yb-vJx" secondAttribute="leading" id="hzC-M1-g4L"/>
+                            <constraint firstItem="CBn-Tt-yvk" firstAttribute="top" secondItem="IL8-P3-jRO" secondAttribute="bottom" constant="8" symbolic="YES" id="hzE-9o-ftc"/>
+                            <constraint firstItem="ocU-nC-7Qw" firstAttribute="top" secondItem="6RD-jp-C8c" secondAttribute="bottom" constant="8" symbolic="YES" id="jrj-s3-aGA"/>
+                            <constraint firstItem="IL8-P3-jRO" firstAttribute="leading" secondItem="CBn-Tt-yvk" secondAttribute="leading" id="lHZ-nS-gpw"/>
+                            <constraint firstItem="AzU-V2-VmL" firstAttribute="trailing" secondItem="a1n-Yb-vJx" secondAttribute="trailing" id="lPZ-yr-sqi"/>
+                            <constraint firstItem="a1n-Yb-vJx" firstAttribute="leading" secondItem="3LN-Km-L4s" secondAttribute="leading" id="lcj-By-zZh"/>
+                            <constraint firstItem="6RD-jp-C8c" firstAttribute="top" secondItem="2Dw-n1-AcB" secondAttribute="bottom" constant="8" symbolic="YES" id="oHI-o4-usr"/>
+                            <constraint firstItem="FSk-FM-pM1" firstAttribute="leading" secondItem="TFQ-fX-bAb" secondAttribute="leading" id="r1g-9m-oen"/>
+                            <constraint firstItem="paP-em-auJ" firstAttribute="top" secondItem="36t-om-Zta" secondAttribute="bottom" constant="8" symbolic="YES" id="rkI-YB-aec"/>
+                            <constraint firstItem="Aaq-4y-qdU" firstAttribute="leading" secondItem="36t-om-Zta" secondAttribute="leading" id="w8O-OD-j5l"/>
+                            <constraint firstItem="5nc-gg-V7z" firstAttribute="leading" secondItem="6RD-jp-C8c" secondAttribute="trailing" constant="8" symbolic="YES" id="xgL-rA-ulU"/>
+                            <constraint firstItem="2Dw-n1-AcB" firstAttribute="top" secondItem="yP8-Yh-w4o" secondAttribute="bottom" constant="8" symbolic="YES" id="yYO-HQ-o1C"/>
+                            <constraint firstItem="umh-ud-8Hn" firstAttribute="leading" secondItem="FSk-FM-pM1" secondAttribute="leading" id="z64-G7-Nmb"/>
+                            <constraint firstItem="3LN-Km-L4s" firstAttribute="leading" secondItem="umh-ud-8Hn" secondAttribute="leading" id="zu9-07-AMI"/>
                         </constraints>
                     </view>
                 </viewController>
