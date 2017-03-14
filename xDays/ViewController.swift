@@ -11,14 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     var xDaysDate = Date()
- 
-    @IBAction func daysToCountButton(sender: UIButton) {
-        
-    }
-
-    @IBAction func exceptionDaysButton(sender: UIButton) {
-        
-    }
+    var specialDays: SpecialDays!
+    
+//    @IBAction func daysToCountButton(sender: UIButton) {
+//        
+//    }
+//
+//    @IBAction func exceptionDaysButton(sender: UIButton) {
+//        
+//    }
 
     @IBOutlet var xDaysUntilLabel: UILabel!
     @IBAction func updateDate(sender: UIDatePicker, forEvent event: UIEvent) {
@@ -35,8 +36,19 @@ class ViewController: UIViewController {
         
     }
 
-
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DaysToCount" {
+            let daysToCountViewController = segue.destination as! DaysToCountViewController
+            daysToCountViewController.specialDays = specialDays
+        }
+    }
+    
+    @IBAction func unwindToHere(segue: UIStoryboardSegue) {
+        // And we are back
+        // let svc = segue.sourceViewController as! TheViewControllerClassYouAreReturningFrom
+        // use svc to get mood, action, and place
+    }
+    
     func updateTheDateBadge(daysUntil toDate: Date)
     {
         let application = UIApplication.shared

@@ -54,7 +54,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Days to count..."/>
                                 <connections>
-                                    <segue destination="lRD-z5-vTZ" kind="show" id="U5a-RP-bh3"/>
+                                    <segue destination="lRD-z5-vTZ" kind="presentation" identifier="DaysToCount" id="U5a-RP-bh3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nax-91-wNv">
@@ -103,7 +103,7 @@
                                 <rect key="frame" x="16" y="617" width="37" height="30"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="i8f-bA-R3w"/>
+                                    <segue destination="7zO-qd-r8Z" kind="unwind" unwindAction="unwindToHereWithSegue:" id="cIu-Ee-QnF"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select which days to count:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dw-n1-AcB">
@@ -245,8 +245,18 @@
                             <constraint firstItem="3LN-Km-L4s" firstAttribute="leading" secondItem="umh-ud-8Hn" secondAttribute="leading" id="zu9-07-AMI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="switchFriday" destination="paP-em-auJ" id="49u-1y-jyd"/>
+                        <outlet property="switchMonday" destination="6RD-jp-C8c" id="mLJ-we-G7W"/>
+                        <outlet property="switchSaturday" destination="IL8-P3-jRO" id="kiH-IS-LmE"/>
+                        <outlet property="switchSunday" destination="CBn-Tt-yvk" id="OlG-rt-hvi"/>
+                        <outlet property="switchThursday" destination="36t-om-Zta" id="Foo-22-UBo"/>
+                        <outlet property="switchTuesday" destination="ocU-nC-7Qw" id="ItM-CN-FLt"/>
+                        <outlet property="switchWednesday" destination="Aaq-4y-qdU" id="u13-GT-vhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A2n-N2-r13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7zO-qd-r8Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="792.79999999999995" y="38.23088455772114"/>
         </scene>
@@ -282,7 +292,4 @@
             <point key="canvasLocation" x="793" y="797"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="i8f-bA-R3w"/>
-    </inferredMetricsTieBreakers>
 </document>
