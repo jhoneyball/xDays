@@ -38,11 +38,14 @@ class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DaysToCount" {
-            let daysToCountViewController = segue.destination as! DaysToCountViewController
-            daysToCountViewController.specialDays = specialDays
+                let daysToCountViewController = segue.destination as! DaysToCountViewController
+                daysToCountViewController.specialDays = specialDays
+        } else if segue.identifier == "ExceptionDays" {
+                let exceptionDaysViewController = segue.destination as! ExceptionDaysController
+                exceptionDaysViewController.specialDays = specialDays
         }
     }
-    
+
     @IBAction func unwindToHere(segue: UIStoryboardSegue) {
         // And we are back
         // let svc = segue.sourceViewController as! TheViewControllerClassYouAreReturningFrom

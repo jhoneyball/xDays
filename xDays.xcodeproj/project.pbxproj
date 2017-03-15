@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		0DA48C8D1E75830D00C5A3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */; };
 		0DA48C8F1E75830D00C5A3A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48C8E1E75830D00C5A3A1 /* ViewController.swift */; };
-		0DA48C921E75830D00C5A3A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA48C901E75830D00C5A3A1 /* Main.storyboard */; };
 		0DA48C941E75830D00C5A3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA48C931E75830D00C5A3A1 /* Assets.xcassets */; };
 		0DA48C971E75830D00C5A3A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA48C951E75830D00C5A3A1 /* LaunchScreen.storyboard */; };
 		0DA48CA21E75830D00C5A3A1 /* xDaysTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CA11E75830D00C5A3A1 /* xDaysTests.swift */; };
 		0DA48CAD1E75830D00C5A3A1 /* xDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CAC1E75830D00C5A3A1 /* xDaysUITests.swift */; };
 		0DA48CBC1E760E9400C5A3A1 /* DaysToCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CBB1E760E9400C5A3A1 /* DaysToCountViewController.swift */; };
 		0DA48CBE1E76100700C5A3A1 /* SpecialDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CBD1E76100700C5A3A1 /* SpecialDays.swift */; };
+		0DA48CC11E78A2C600C5A3A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA48CBF1E78A2C600C5A3A1 /* Main.storyboard */; };
+		0DA48CC31E78A4E000C5A3A1 /* ExceptionDaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC21E78A4E000C5A3A1 /* ExceptionDaysViewController.swift */; };
+		0DA48CC51E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC41E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift */; };
+		0DA48CC71E79F7BC00C5A3A1 /* DateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC61E79F7BC00C5A3A1 /* DateStore.swift */; };
+		0DA48CC91E79F8F300C5A3A1 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC81E79F8F300C5A3A1 /* DateItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,6 @@
 		0DA48C891E75830D00C5A3A1 /* xDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA48C8E1E75830D00C5A3A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0DA48C911E75830D00C5A3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DA48C931E75830D00C5A3A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA48C961E75830D00C5A3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DA48C981E75830D00C5A3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +54,11 @@
 		0DA48CAE1E75830D00C5A3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA48CBB1E760E9400C5A3A1 /* DaysToCountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysToCountViewController.swift; sourceTree = "<group>"; };
 		0DA48CBD1E76100700C5A3A1 /* SpecialDays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialDays.swift; sourceTree = "<group>"; };
+		0DA48CC01E78A2C600C5A3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0DA48CC21E78A4E000C5A3A1 /* ExceptionDaysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionDaysViewController.swift; sourceTree = "<group>"; };
+		0DA48CC41E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionDatesContainerTableController.swift; sourceTree = "<group>"; };
+		0DA48CC61E79F7BC00C5A3A1 /* DateStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateStore.swift; sourceTree = "<group>"; };
+		0DA48CC81E79F8F300C5A3A1 /* DateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +111,16 @@
 			children = (
 				0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */,
 				0DA48C8E1E75830D00C5A3A1 /* ViewController.swift */,
-				0DA48C901E75830D00C5A3A1 /* Main.storyboard */,
-				0DA48C931E75830D00C5A3A1 /* Assets.xcassets */,
+				0DA48CBF1E78A2C600C5A3A1 /* Main.storyboard */,
 				0DA48C951E75830D00C5A3A1 /* LaunchScreen.storyboard */,
 				0DA48C981E75830D00C5A3A1 /* Info.plist */,
+				0DA48C931E75830D00C5A3A1 /* Assets.xcassets */,
 				0DA48CBA1E760E6700C5A3A1 /* DaysToCount */,
 				0DA48CBD1E76100700C5A3A1 /* SpecialDays.swift */,
+				0DA48CC61E79F7BC00C5A3A1 /* DateStore.swift */,
+				0DA48CC81E79F8F300C5A3A1 /* DateItem.swift */,
+				0DA48CC21E78A4E000C5A3A1 /* ExceptionDaysViewController.swift */,
+				0DA48CC41E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift */,
 			);
 			path = xDays;
 			sourceTree = "<group>";
@@ -247,9 +259,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DA48CC11E78A2C600C5A3A1 /* Main.storyboard in Resources */,
 				0DA48C971E75830D00C5A3A1 /* LaunchScreen.storyboard in Resources */,
 				0DA48C941E75830D00C5A3A1 /* Assets.xcassets in Resources */,
-				0DA48C921E75830D00C5A3A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,8 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA48C8F1E75830D00C5A3A1 /* ViewController.swift in Sources */,
+				0DA48CC71E79F7BC00C5A3A1 /* DateStore.swift in Sources */,
+				0DA48CC31E78A4E000C5A3A1 /* ExceptionDaysViewController.swift in Sources */,
+				0DA48CC51E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift in Sources */,
 				0DA48CBC1E760E9400C5A3A1 /* DaysToCountViewController.swift in Sources */,
 				0DA48CBE1E76100700C5A3A1 /* SpecialDays.swift in Sources */,
+				0DA48CC91E79F8F300C5A3A1 /* DateItem.swift in Sources */,
 				0DA48C8D1E75830D00C5A3A1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,20 +329,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0DA48C901E75830D00C5A3A1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0DA48C911E75830D00C5A3A1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0DA48C951E75830D00C5A3A1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0DA48C961E75830D00C5A3A1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0DA48CBF1E78A2C600C5A3A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0DA48CC01E78A2C600C5A3A1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -531,6 +547,7 @@
 				0DA48CB31E75830D00C5A3A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA48CB41E75830D00C5A3A1 /* Build configuration list for PBXNativeTarget "xDaysTests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +556,7 @@
 				0DA48CB61E75830D00C5A3A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0DA48CB71E75830D00C5A3A1 /* Build configuration list for PBXNativeTarget "xDaysUITests" */ = {
 			isa = XCConfigurationList;
@@ -547,6 +565,7 @@
 				0DA48CB91E75830D00C5A3A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

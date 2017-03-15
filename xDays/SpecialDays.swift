@@ -8,16 +8,16 @@
 
 import Foundation
 
-class SpecialDays {
+class SpecialDays:NSObject {
     
     
-    private var countMondaysBool = true
-    private var countTuesdaysBool = true
-    private var countWednesdaysBool = true
-    private var countThursdaysBool = true
-    private var countFridaysBool = true
-    private var countSaturdaysBool = true
-    private var countSundaysBool = true
+    private var countMondaysBool: Bool
+    private var countTuesdaysBool: Bool
+    private var countWednesdaysBool: Bool
+    private var countThursdaysBool: Bool
+    private var countFridaysBool: Bool
+    private var countSaturdaysBool: Bool
+    private var countSundaysBool: Bool
 
     func countMondays() -> Bool {return countMondaysBool}
     func countTuesdays() -> Bool {return countTuesdaysBool}
@@ -35,7 +35,24 @@ class SpecialDays {
     func setCountSaturdays(_ value: Bool) {countSaturdaysBool = value}
     func setCountSundays(_ value: Bool) {countSundaysBool = value}
 
-    private var exclusionDates = [Date]()
+    var exclusionDates: DateStore
 
-
+    init(monday: Bool, tuesday: Bool, wednesday: Bool, thursday: Bool, friday: Bool, saturday: Bool, sunday: Bool, datesArray: [Date]) {
+        countMondaysBool = monday
+        countTuesdaysBool = tuesday
+        countWednesdaysBool = wednesday
+        countThursdaysBool = thursday
+        countFridaysBool = friday
+        countSaturdaysBool = saturday
+        countSundaysBool = sunday
+        exclusionDates = DateStore()
+    }
+    
+    convenience init(includeWeekends: Bool) {
+        if includeWeekends {
+            self.init(monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: true, datesArray: [Date]())
+        } else {
+            self.init(monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: false, sunday: false, datesArray: [Date]())
+        }
+    }
 }

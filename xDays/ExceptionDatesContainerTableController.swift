@@ -1,0 +1,37 @@
+//
+//  ExceptionDatesViewController.swift
+//  xDays
+//
+//  Created by James Honeyball on 15/03/2017.
+//  Copyright © 2017 James Honeyball. All rights reserved.
+//
+
+import UIKit
+
+class ExceptionDatesContainerTableController: UITableViewController {
+        var specialDays: SpecialDays!
+    
+    override func tableView(_ tableView: UITableView,
+                               numberOfRowsInSection section: Int) -> Int {
+        return specialDays.exclusionDates.allDateItems.count
+        
+    }
+
+    
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Create an instance of UITableViewCell, with default appearance
+        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        
+        // Set the text on the cell with the description of the item
+        // that is at the nth index of items, where n = row this cell
+        // will appear in on the tableview
+        let dateItem = specialDays.exclusionDates.allDateItems[indexPath.row]
+
+        cell.textLabel?.text = dateItem.date.description
+        cell.detailTextLabel?.text = "excluded"
+        
+        return cell
+    }
+    
+}
