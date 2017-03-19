@@ -12,15 +12,18 @@ class DateStore {
     
     var allDateItems = [DateItem]()
 
-    init() {
-        for _ in 0..<5 {
-            createItem()
-        }
-    }
 
     @discardableResult func createItem() -> DateItem {
         let newDateItem = DateItem(random: true)
         allDateItems.append(newDateItem)
         return newDateItem
     }
+    
+    func removeItem(_ item: DateItem) {
+        if let index = allDateItems.index(of: item) {
+            allDateItems.remove(at: index)
+        }
+    }
 }
+
+

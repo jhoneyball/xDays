@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var xDaysDate = Date()
+    var targetDate: TargetDate!
     var specialDays: SpecialDays!
     
 //    @IBAction func daysToCountButton(sender: UIButton) {
@@ -22,18 +22,20 @@ class ViewController: UIViewController {
 //    }
 
     @IBOutlet var xDaysUntilLabel: UILabel!
+    @IBOutlet var datePicker:UIDatePicker!
+
     @IBAction func updateDate(sender: UIDatePicker, forEvent event: UIEvent) {
-            xDaysDate = sender.date
-            print ("The date is \(xDaysDate)")
-            updateTheDateBadge(daysUntil: xDaysDate)
+            targetDate.setTargetDate(date: sender.date)
+            print ("The date is \(targetDate.date)")
+            updateTheDateBadge(daysUntil: targetDate.date)
         }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        updateTheDateBadge(daysUntil: xDaysDate)
-        
+        updateTheDateBadge(daysUntil: targetDate.date)
+        datePicker.date = targetDate.date
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,7 +64,7 @@ class ViewController: UIViewController {
             application.registerForRemoteNotifications()
         }
         
-        let daysToGo = daysBetween(Date(), to: xDaysDate)
+        let daysToGo = daysBetween(Date(), to: targetDate.date)
         
         var badgeNumber: Int
         if (daysToGo > 0 && daysToGo < 9999) {

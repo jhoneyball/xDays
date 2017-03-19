@@ -80,6 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="datePicker" destination="QgF-jj-Kh6" id="owz-9I-Fva"/>
                         <outlet property="xDaysUntilLabel" destination="2d5-U6-264" id="vQb-zS-8aE"/>
                     </connections>
                 </viewController>
@@ -292,7 +293,7 @@
                                         </constraints>
                                         <state key="normal" title="Add"/>
                                         <connections>
-                                            <action selector="addNewItem:" destination="pYJ-nT-Xjf" eventType="touchUpInside" id="PpK-bO-hWr"/>
+                                            <segue destination="7dI-fq-Eyr" kind="presentation" id="hcE-P9-7WA"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -353,6 +354,80 @@
             </objects>
             <point key="canvasLocation" x="792.79999999999995" y="800.14992503748135"/>
         </scene>
+        <!--Exception Date Input Controller-->
+        <scene sceneID="lPy-2I-Vne">
+            <objects>
+                <viewController id="7dI-fq-Eyr" userLabel="Exception Date Input Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IM1-J4-rGc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Paz-H4-XKZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mpx-3f-8kL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NC-qO-F9Z" userLabel="Header View">
+                                <rect key="frame" x="0.0" y="8" width="375" height="57"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOs-PX-mxD">
+                                        <rect key="frame" x="246" y="17" width="90" height="22"/>
+                                        <state key="normal" title="Save"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hed-B5-jKt">
+                                        <rect key="frame" x="57" y="17" width="88" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="88" id="CPM-Cz-TrM"/>
+                                        </constraints>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <segue destination="7Ex-ao-NA9" kind="unwind" unwindAction="unwindToHereWithSegue:" id="nts-Jo-P91"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hed-B5-jKt" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="top" constant="17" id="83M-sS-yFl"/>
+                                    <constraint firstAttribute="bottom" secondItem="hed-B5-jKt" secondAttribute="bottom" constant="18" id="H0a-7F-Rj8"/>
+                                    <constraint firstItem="xOs-PX-mxD" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="top" constant="17" id="Md7-HF-oad"/>
+                                    <constraint firstAttribute="trailing" secondItem="xOs-PX-mxD" secondAttribute="trailing" constant="39" id="SSL-U6-Y18"/>
+                                    <constraint firstAttribute="bottom" secondItem="xOs-PX-mxD" secondAttribute="bottom" constant="18" id="dms-Jf-uOt"/>
+                                    <constraint firstItem="xOs-PX-mxD" firstAttribute="leading" secondItem="hed-B5-jKt" secondAttribute="trailing" constant="101" id="gdw-nz-2Ff"/>
+                                    <constraint firstItem="hed-B5-jKt" firstAttribute="leading" secondItem="8NC-qO-F9Z" secondAttribute="leading" constant="57" id="lyo-AM-ZO5"/>
+                                </constraints>
+                            </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4VG-vl-DOw">
+                                <rect key="frame" x="0.0" y="65" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="511649658.95396799">
+                                    <!--2017-03-19 20:54:18 +0000-->
+                                </date>
+                            </datePicker>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBS-dr-oWp">
+                                <rect key="frame" x="0.0" y="281" width="375" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="leading" secondItem="Mpx-3f-8kL" secondAttribute="leading" id="2iH-BT-QvQ"/>
+                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="trailing" secondItem="4VG-vl-DOw" secondAttribute="trailing" id="7Aw-Nc-QwF"/>
+                            <constraint firstAttribute="trailing" secondItem="8NC-qO-F9Z" secondAttribute="trailing" id="IbH-u3-sav"/>
+                            <constraint firstItem="UBS-dr-oWp" firstAttribute="centerX" secondItem="4VG-vl-DOw" secondAttribute="centerX" id="KqF-83-ney"/>
+                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="top" secondItem="Mpx-3f-8kL" secondAttribute="top" constant="8" id="UI8-du-kSn"/>
+                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="leading" secondItem="UBS-dr-oWp" secondAttribute="leading" id="Y89-iR-UwH"/>
+                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="leading" secondItem="4VG-vl-DOw" secondAttribute="leading" id="hao-OD-bXa"/>
+                            <constraint firstItem="4VG-vl-DOw" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="bottom" id="kDw-yn-sdi"/>
+                            <constraint firstItem="UBS-dr-oWp" firstAttribute="top" secondItem="4VG-vl-DOw" secondAttribute="bottom" id="l3L-Ck-u24"/>
+                            <constraint firstItem="4VG-vl-DOw" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="bottom" id="nnh-u1-m78"/>
+                            <constraint firstItem="UBS-dr-oWp" firstAttribute="top" secondItem="4VG-vl-DOw" secondAttribute="bottom" id="sJR-CQ-vDF"/>
+                            <constraint firstAttribute="bottom" secondItem="8NC-qO-F9Z" secondAttribute="bottom" constant="602" id="uCm-Jd-0Bg"/>
+                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="trailing" secondItem="UBS-dr-oWp" secondAttribute="trailing" id="za6-Us-UFt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0f7-dL-nD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7Ex-ao-NA9" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1584.8" y="509.59520239880067"/>
+        </scene>
         <!--Exception Dates Table Controller-->
         <scene sceneID="tnu-lb-jQX">
             <objects>
@@ -388,7 +463,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPt-bJ-2Ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="801"/>
+            <point key="canvasLocation" x="1580" y="1107"/>
         </scene>
     </scenes>
 </document>

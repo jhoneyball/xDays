@@ -16,10 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let specialDays = SpecialDays(includeWeekends: true)
+        
+        var daysToCount = DaysToCount(fromDisk: true)
+        if daysToCount == nil {
+            daysToCount = DaysToCount(includeWeekends: true)
+        }
+        
+        let specialDays = SpecialDays(daysToCount: daysToCount!, exclusionDates: DateStore())
         
         let viewController = window!.rootViewController as! ViewController
         viewController.specialDays = specialDays
+        
+        
+        let targetDate = TargetDate.loadTargetDate()
+        if targetDate == nil {
+            viewController.targetDate = TargetDate(date: Date())
+        } else {
+            viewController.targetDate = targetDate!
+        }
+
         return true
     }
 
