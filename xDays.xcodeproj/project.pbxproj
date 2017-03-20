@@ -22,6 +22,7 @@
 		0DA48CC91E79F8F300C5A3A1 /* DateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC81E79F8F300C5A3A1 /* DateItem.swift */; };
 		0DA48CCB1E7EB69700C5A3A1 /* DaysToCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */; };
 		0DA48CCD1E7EF4DA00C5A3A1 /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */; };
+		0DA48CCF1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		0DA48CC81E79F8F300C5A3A1 /* DateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateItem.swift; sourceTree = "<group>"; };
 		0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysToCount.swift; sourceTree = "<group>"; };
 		0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDate.swift; sourceTree = "<group>"; };
+		0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionDateInputController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				0DA48CBB1E760E9400C5A3A1 /* DaysToCountViewController.swift */,
 				0DA48CC21E78A4E000C5A3A1 /* ExceptionDaysViewController.swift */,
 				0DA48CC41E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift */,
+				0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */,
 				0DA48CBD1E76100700C5A3A1 /* SpecialDays.swift */,
 				0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */,
 				0DA48CC61E79F7BC00C5A3A1 /* DateStore.swift */,
@@ -292,6 +295,7 @@
 				0DA48CCD1E7EF4DA00C5A3A1 /* TargetDate.swift in Sources */,
 				0DA48CBC1E760E9400C5A3A1 /* DaysToCountViewController.swift in Sources */,
 				0DA48CBE1E76100700C5A3A1 /* SpecialDays.swift in Sources */,
+				0DA48CCF1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift in Sources */,
 				0DA48CC91E79F8F300C5A3A1 /* DateItem.swift in Sources */,
 				0DA48C8D1E75830D00C5A3A1 /* AppDelegate.swift in Sources */,
 			);

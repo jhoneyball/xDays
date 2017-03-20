@@ -293,7 +293,7 @@
                                         </constraints>
                                         <state key="normal" title="Add"/>
                                         <connections>
-                                            <segue destination="7dI-fq-Eyr" kind="presentation" id="hcE-P9-7WA"/>
+                                            <segue destination="7dI-fq-Eyr" kind="presentation" id="3rP-iy-Edm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -352,12 +352,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AS-fA-DxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Lz-K0-BEE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="792.79999999999995" y="800.14992503748135"/>
+            <point key="canvasLocation" x="793" y="880"/>
         </scene>
         <!--Exception Date Input Controller-->
         <scene sceneID="lPy-2I-Vne">
             <objects>
-                <viewController id="7dI-fq-Eyr" userLabel="Exception Date Input Controller" sceneMemberID="viewController">
+                <viewController id="7dI-fq-Eyr" userLabel="Exception Date Input Controller" customClass="ExceptionDateInputController" customModule="xDays" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IM1-J4-rGc"/>
                         <viewControllerLayoutGuide type="bottom" id="Paz-H4-XKZ"/>
@@ -367,66 +367,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NC-qO-F9Z" userLabel="Header View">
-                                <rect key="frame" x="0.0" y="8" width="375" height="57"/>
+                                <rect key="frame" x="35.5" y="15" width="304" height="73"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOs-PX-mxD">
-                                        <rect key="frame" x="246" y="17" width="90" height="22"/>
-                                        <state key="normal" title="Save"/>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hed-B5-jKt">
-                                        <rect key="frame" x="57" y="17" width="88" height="22"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="88" id="CPM-Cz-TrM"/>
-                                        </constraints>
+                                        <rect key="frame" x="57" y="20" width="48" height="30"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
-                                            <segue destination="7Ex-ao-NA9" kind="unwind" unwindAction="unwindToHereWithSegue:" id="nts-Jo-P91"/>
+                                            <action selector="cancelWithSender:" destination="7dI-fq-Eyr" eventType="touchUpInside" id="hKi-Dk-Zg3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOs-PX-mxD">
+                                        <rect key="frame" x="186" y="20" width="48" height="30"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="addNewDateWithSender:" destination="7dI-fq-Eyr" eventType="touchUpInside" id="GBp-5j-4ae"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="hed-B5-jKt" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="top" constant="17" id="83M-sS-yFl"/>
-                                    <constraint firstAttribute="bottom" secondItem="hed-B5-jKt" secondAttribute="bottom" constant="18" id="H0a-7F-Rj8"/>
-                                    <constraint firstItem="xOs-PX-mxD" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="top" constant="17" id="Md7-HF-oad"/>
-                                    <constraint firstAttribute="trailing" secondItem="xOs-PX-mxD" secondAttribute="trailing" constant="39" id="SSL-U6-Y18"/>
-                                    <constraint firstAttribute="bottom" secondItem="xOs-PX-mxD" secondAttribute="bottom" constant="18" id="dms-Jf-uOt"/>
-                                    <constraint firstItem="xOs-PX-mxD" firstAttribute="leading" secondItem="hed-B5-jKt" secondAttribute="trailing" constant="101" id="gdw-nz-2Ff"/>
-                                    <constraint firstItem="hed-B5-jKt" firstAttribute="leading" secondItem="8NC-qO-F9Z" secondAttribute="leading" constant="57" id="lyo-AM-ZO5"/>
+                                    <constraint firstItem="hed-B5-jKt" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="top" constant="20" id="Iad-NT-sgE"/>
+                                    <constraint firstAttribute="bottom" secondItem="hed-B5-jKt" secondAttribute="bottom" constant="23" id="Lir-PK-Rd9"/>
+                                    <constraint firstItem="xOs-PX-mxD" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="top" constant="20" id="Zg6-R0-Z7p"/>
+                                    <constraint firstAttribute="trailing" secondItem="xOs-PX-mxD" secondAttribute="trailing" constant="70" id="Zhd-qC-JRR"/>
+                                    <constraint firstAttribute="bottom" secondItem="xOs-PX-mxD" secondAttribute="bottom" constant="23" id="eQk-B0-VNd"/>
+                                    <constraint firstItem="xOs-PX-mxD" firstAttribute="leading" secondItem="hed-B5-jKt" secondAttribute="trailing" constant="81" id="eRf-23-U08"/>
+                                    <constraint firstItem="hed-B5-jKt" firstAttribute="leading" secondItem="8NC-qO-F9Z" secondAttribute="leading" constant="57" id="hJp-cZ-8o5"/>
+                                    <constraint firstItem="xOs-PX-mxD" firstAttribute="width" secondItem="hed-B5-jKt" secondAttribute="width" id="zKb-RC-zAT"/>
+                                    <constraint firstItem="xOs-PX-mxD" firstAttribute="height" secondItem="hed-B5-jKt" secondAttribute="height" id="zdG-sv-84I"/>
                                 </constraints>
                             </view>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4VG-vl-DOw">
-                                <rect key="frame" x="0.0" y="65" width="375" height="216"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4VG-vl-DOw">
+                                <rect key="frame" x="0.0" y="72" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="511649658.95396799">
                                     <!--2017-03-19 20:54:18 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="updateDateWithSender:forEvent:" destination="7dI-fq-Eyr" eventType="valueChanged" id="SLo-Qa-cxq"/>
+                                </connections>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBS-dr-oWp">
-                                <rect key="frame" x="0.0" y="281" width="375" height="216"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="leading" secondItem="Mpx-3f-8kL" secondAttribute="leading" id="2iH-BT-QvQ"/>
-                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="trailing" secondItem="4VG-vl-DOw" secondAttribute="trailing" id="7Aw-Nc-QwF"/>
-                            <constraint firstAttribute="trailing" secondItem="8NC-qO-F9Z" secondAttribute="trailing" id="IbH-u3-sav"/>
-                            <constraint firstItem="UBS-dr-oWp" firstAttribute="centerX" secondItem="4VG-vl-DOw" secondAttribute="centerX" id="KqF-83-ney"/>
-                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="top" secondItem="Mpx-3f-8kL" secondAttribute="top" constant="8" id="UI8-du-kSn"/>
-                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="leading" secondItem="UBS-dr-oWp" secondAttribute="leading" id="Y89-iR-UwH"/>
-                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="leading" secondItem="4VG-vl-DOw" secondAttribute="leading" id="hao-OD-bXa"/>
-                            <constraint firstItem="4VG-vl-DOw" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="bottom" id="kDw-yn-sdi"/>
-                            <constraint firstItem="UBS-dr-oWp" firstAttribute="top" secondItem="4VG-vl-DOw" secondAttribute="bottom" id="l3L-Ck-u24"/>
-                            <constraint firstItem="4VG-vl-DOw" firstAttribute="top" secondItem="8NC-qO-F9Z" secondAttribute="bottom" id="nnh-u1-m78"/>
-                            <constraint firstItem="UBS-dr-oWp" firstAttribute="top" secondItem="4VG-vl-DOw" secondAttribute="bottom" id="sJR-CQ-vDF"/>
-                            <constraint firstAttribute="bottom" secondItem="8NC-qO-F9Z" secondAttribute="bottom" constant="602" id="uCm-Jd-0Bg"/>
-                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="trailing" secondItem="UBS-dr-oWp" secondAttribute="trailing" id="za6-Us-UFt"/>
+                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="centerX" secondItem="Mpx-3f-8kL" secondAttribute="centerX" id="KKl-Xq-pXZ"/>
+                            <constraint firstItem="8NC-qO-F9Z" firstAttribute="top" secondItem="Mpx-3f-8kL" secondAttribute="top" constant="15" id="U7V-ig-E2e"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0f7-dL-nD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="7Ex-ao-NA9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1584.8" y="509.59520239880067"/>
+            <point key="canvasLocation" x="1541" y="224"/>
         </scene>
         <!--Exception Dates Table Controller-->
         <scene sceneID="tnu-lb-jQX">
@@ -463,7 +454,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPt-bJ-2Ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="1107"/>
+            <point key="canvasLocation" x="1541" y="906"/>
         </scene>
     </scenes>
 </document>

@@ -43,10 +43,5 @@ class ExceptionDaysController: UIViewController {
             exceptionDaysContainer.specialDays = specialDays
         }
     }
-    @IBAction func unwindToHere(segue: UIStoryboardSegue) {
-        // And we are back
-        // let svc = segue.sourceViewController as! TheViewControllerClassYouAreReturningFrom
-        // use svc to get mood, action, and place
-    }
 }
 
