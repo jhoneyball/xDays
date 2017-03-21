@@ -9,15 +9,16 @@
 import UIKit
 
 class ExceptionDateInputController: UIViewController  {
-    var tempDate = Date()
-    var dateSelected = Date()
-
+    var dateToReturn = Date()
+    var delegate:ModalViewControllerDelegate!
+    
     @IBAction func updateDate(sender: UIDatePicker, forEvent event: UIEvent) {
-        tempDate = sender.date
+        dateToReturn = sender.date
     }
     
     @IBAction func addNewDate(sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        delegate?.sendValue(dateReturn: dateToReturn)
+        self.dismiss(animated: true, completion: nil )
         print("done")
     }
     
@@ -25,5 +26,4 @@ class ExceptionDateInputController: UIViewController  {
         self.dismiss(animated: true, completion: nil)
         print("cancel")
     }
-    
 }

@@ -8,12 +8,16 @@
 
 import UIKit
 import os.log
+import Foundation
 
 class DateItem: NSObject, NSCoding {
 
     //MARK: Properties
-    var date: Date
-    var include: Bool
+    private var date: Date
+    private var include: Bool
+
+    func getDate()-> Date {return date}
+    func getInclude()-> Bool {return include}
 
     //MARK: Archiving Paths
     static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -30,8 +34,11 @@ class DateItem: NSObject, NSCoding {
     
 
     init (date: Date, include: Bool) {
-        self.date = date
+        let userCalendar = Calendar.current
+        let components: DateComponents = userCalendar.dateComponents([.year, .month, .day], from: date)
+        self.date = userCalendar.date(from: components)!
         self.include = include
+
     }
     
     convenience init(random: Bool) {

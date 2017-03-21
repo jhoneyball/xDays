@@ -28,7 +28,7 @@ class ExceptionDatesContainerTableController: UITableViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .short
         
-        cell.textLabel?.text = dateFormatter.string(from: dateItem.date)
+        cell.textLabel?.text = dateFormatter.string(from: dateItem.getDate())
         cell.detailTextLabel?.text = "excluded"
         
         return cell
