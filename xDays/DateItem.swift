@@ -33,10 +33,8 @@ class DateItem: NSObject, NSCoding {
     //MARK: Initialization
     
 
-    init (date: Date, include: Bool) {
-        let userCalendar = Calendar.current
-        let components: DateComponents = userCalendar.dateComponents([.year, .month, .day], from: date)
-        self.date = userCalendar.date(from: components)!
+    init (date initDate: Date, include: Bool) {
+        self.date = NoTimeDate(initDate).date
         self.include = include
 
     }

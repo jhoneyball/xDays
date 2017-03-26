@@ -21,8 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if daysToCount == nil {
             daysToCount = DaysToCount(includeWeekends: true)
         }
-        
-        let specialDays = SpecialDays(daysToCount: daysToCount!, exclusionDates: DateStore())
+
+        var exclusionDates = DateStore(fromDisk: true)
+        if exclusionDates == nil {
+            let emptyDateItems = [DateItem]()
+            exclusionDates = DateStore(allDateItems: emptyDateItems)
+        }
+
+
+        let specialDays = SpecialDays(daysToCount: daysToCount!, exclusionDates: exclusionDates!)
         
         let viewController = window!.rootViewController as! ViewController
         viewController.specialDays = specialDays

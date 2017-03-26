@@ -46,8 +46,8 @@ class TargetDate: NSObject, NSCoding {
         self.init(date: date)
     }
     
-    func setTargetDate(date: Date) {
-        self.date = date
+    func setTargetDate(date dateWithTime: Date) {
+        self.date = NoTimeDate(dateWithTime).date
         let path = DaysToCount.ArchiveURL.path
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(self, toFile: path)
         if isSuccessfulSave {
