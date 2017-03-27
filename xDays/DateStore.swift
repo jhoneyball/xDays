@@ -13,8 +13,8 @@ class DateStore:  NSObject, NSCoding {
     var allDateItems = [DateItem]()
 
     //MARK: Archiving Paths
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("dateStore")
+    private static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    private static let ArchiveURL = DocumentsDirectory.appendingPathComponent("dateStore")
     
     struct PropertyKey {
         static let allDateItems = "allDateItems"

@@ -19,11 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var daysToCount = DaysToCount(fromDisk: true)
         if daysToCount == nil {
+            print("Failed to load weekdays to count from disk")
             daysToCount = DaysToCount(includeWeekends: true)
         }
 
         var exclusionDates = DateStore(fromDisk: true)
         if exclusionDates == nil {
+            print("Failed to load exclusion dates from disk")
             let emptyDateItems = [DateItem]()
             exclusionDates = DateStore(allDateItems: emptyDateItems)
         }
@@ -31,15 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let specialDays = SpecialDays(daysToCount: daysToCount!, exclusionDates: exclusionDates!)
         
-        let viewController = window!.rootViewController as! ViewController
-        viewController.specialDays = specialDays
+        let mainViewController = window!.rootViewController as! MainViewController
+        mainViewController.specialDays = specialDays
         
         
         let targetDate = TargetDate.loadTargetDate()
         if targetDate == nil {
-            viewController.targetDate = TargetDate(date: Date())
+            print("Failed to load target date from disk")
+            mainViewController.targetDate = TargetDate(date: Date())
         } else {
-            viewController.targetDate = targetDate!
+            mainViewController.targetDate = targetDate!
         }
 
         return true

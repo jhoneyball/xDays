@@ -20,8 +20,8 @@ class DateItem: NSObject, NSCoding {
     func getInclude()-> Bool {return include}
 
     //MARK: Archiving Paths
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("DateItems")
+    private static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    private static let ArchiveURL = DocumentsDirectory.appendingPathComponent("DateItems")
 
     //MARK: Types
     
@@ -34,7 +34,7 @@ class DateItem: NSObject, NSCoding {
     
 
     init (date initDate: Date, include: Bool) {
-        self.date = NoTimeDate(initDate).date
+        self.date = SimpleDate(initDate).date
         self.include = include
 
     }

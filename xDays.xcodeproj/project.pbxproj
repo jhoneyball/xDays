@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0DA48C8D1E75830D00C5A3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */; };
-		0DA48C8F1E75830D00C5A3A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48C8E1E75830D00C5A3A1 /* ViewController.swift */; };
+		0DA48C8F1E75830D00C5A3A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48C8E1E75830D00C5A3A1 /* MainViewController.swift */; };
 		0DA48C941E75830D00C5A3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA48C931E75830D00C5A3A1 /* Assets.xcassets */; };
 		0DA48C971E75830D00C5A3A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA48C951E75830D00C5A3A1 /* LaunchScreen.storyboard */; };
 		0DA48CAD1E75830D00C5A3A1 /* xDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CAC1E75830D00C5A3A1 /* xDaysUITests.swift */; };
@@ -23,7 +23,7 @@
 		0DA48CCD1E7EF4DA00C5A3A1 /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */; };
 		0DA48CCF1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */; };
 		0DA48CD11E88442900C5A3A1 /* Test_DateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CD01E88442900C5A3A1 /* Test_DateStore.swift */; };
-		0DA48CD31E88756D00C5A3A1 /* NoTimeDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CD21E88756D00C5A3A1 /* NoTimeDate.swift */; };
+		0DF1C2491E89C02C00C670D1 /* SimpleDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1C2481E89C02C00C670D1 /* SimpleDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 /* Begin PBXFileReference section */
 		0DA48C891E75830D00C5A3A1 /* xDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DA48C8E1E75830D00C5A3A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DA48C8E1E75830D00C5A3A1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0DA48C931E75830D00C5A3A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA48C961E75830D00C5A3A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DA48C981E75830D00C5A3A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDate.swift; sourceTree = "<group>"; };
 		0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionDateInputController.swift; sourceTree = "<group>"; };
 		0DA48CD01E88442900C5A3A1 /* Test_DateStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test_DateStore.swift; sourceTree = "<group>"; };
-		0DA48CD21E88756D00C5A3A1 /* NoTimeDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoTimeDate.swift; sourceTree = "<group>"; };
+		0DF1C2481E89C02C00C670D1 /* SimpleDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */,
-				0DA48C8E1E75830D00C5A3A1 /* ViewController.swift */,
+				0DA48C8E1E75830D00C5A3A1 /* MainViewController.swift */,
 				0DA48CBB1E760E9400C5A3A1 /* DaysToCountViewController.swift */,
 				0DA48CC21E78A4E000C5A3A1 /* ExceptionDaysViewController.swift */,
 				0DA48CC41E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift */,
@@ -128,7 +128,7 @@
 				0DA48CC61E79F7BC00C5A3A1 /* DateStore.swift */,
 				0DA48CC81E79F8F300C5A3A1 /* DateItem.swift */,
 				0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */,
-				0DA48CD21E88756D00C5A3A1 /* NoTimeDate.swift */,
+				0DF1C2481E89C02C00C670D1 /* SimpleDate.swift */,
 				0DA48CBF1E78A2C600C5A3A1 /* Main.storyboard */,
 				0DA48C951E75830D00C5A3A1 /* LaunchScreen.storyboard */,
 				0DA48C981E75830D00C5A3A1 /* Info.plist */,
@@ -292,15 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA48CCB1E7EB69700C5A3A1 /* DaysToCount.swift in Sources */,
-				0DA48C8F1E75830D00C5A3A1 /* ViewController.swift in Sources */,
+				0DA48C8F1E75830D00C5A3A1 /* MainViewController.swift in Sources */,
 				0DA48CC71E79F7BC00C5A3A1 /* DateStore.swift in Sources */,
 				0DA48CC31E78A4E000C5A3A1 /* ExceptionDaysViewController.swift in Sources */,
+				0DF1C2491E89C02C00C670D1 /* SimpleDate.swift in Sources */,
 				0DA48CC51E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift in Sources */,
 				0DA48CCD1E7EF4DA00C5A3A1 /* TargetDate.swift in Sources */,
 				0DA48CBC1E760E9400C5A3A1 /* DaysToCountViewController.swift in Sources */,
 				0DA48CBE1E76100700C5A3A1 /* SpecialDays.swift in Sources */,
 				0DA48CCF1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift in Sources */,
-				0DA48CD31E88756D00C5A3A1 /* NoTimeDate.swift in Sources */,
 				0DA48CC91E79F8F300C5A3A1 /* DateItem.swift in Sources */,
 				0DA48C8D1E75830D00C5A3A1 /* AppDelegate.swift in Sources */,
 			);

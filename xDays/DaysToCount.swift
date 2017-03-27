@@ -18,8 +18,8 @@ private var countSaturdaysBool: Bool
 private var countSundaysBool: Bool
 
 //MARK: Archiving Paths
-static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-static let ArchiveURL = DocumentsDirectory.appendingPathComponent("specialDays")
+private static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+private static let ArchiveURL = DocumentsDirectory.appendingPathComponent("specialDays")
 
 //MARK: Types
 struct PropertyKey {

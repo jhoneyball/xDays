@@ -17,8 +17,8 @@ class TargetDate: NSObject, NSCoding {
     var date: Date
 
     //MARK: Archiving Paths
-    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("targetDate")
+    private static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    private static let ArchiveURL = DocumentsDirectory.appendingPathComponent("targetDate")
     
     //MARK: Types
     
@@ -47,8 +47,8 @@ class TargetDate: NSObject, NSCoding {
     }
     
     func setTargetDate(date dateWithTime: Date) {
-        self.date = NoTimeDate(dateWithTime).date
-        let path = DaysToCount.ArchiveURL.path
+        self.date = SimpleDate(dateWithTime).date
+        let path = TargetDate.ArchiveURL.path
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(self, toFile: path)
         if isSuccessfulSave {
             print("TargetDate successfully saved. \(date)")
@@ -58,7 +58,7 @@ class TargetDate: NSObject, NSCoding {
     }
     
     static func loadTargetDate() -> TargetDate?  {
-        let targetDate = NSKeyedUnarchiver.unarchiveObject(withFile: DaysToCount.ArchiveURL.path) as? TargetDate
+        let targetDate = NSKeyedUnarchiver.unarchiveObject(withFile: TargetDate.ArchiveURL.path) as? TargetDate
         if targetDate != nil {
             print("TargetDate successfully loaded. \(targetDate!.date)")
         }

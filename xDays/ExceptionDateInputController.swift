@@ -13,7 +13,8 @@ class ExceptionDateInputController: UIViewController  {
     var delegate:ModalViewControllerDelegate!
     
     @IBAction func updateDate(sender: UIDatePicker, forEvent event: UIEvent) {
-        dateToReturn = sender.date
+        let simpleReturnDate = SimpleDate(sender.date)
+        dateToReturn = simpleReturnDate.date
     }
     
     @IBAction func addNewDate(sender: UIButton) {
@@ -25,5 +26,11 @@ class ExceptionDateInputController: UIViewController  {
     @IBAction func cancel(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         print("cancel")
+    }
+    
+    @IBOutlet var datePicker:UIDatePicker!
+    
+    override func viewDidLoad() {
+        datePicker.date = SimpleDate(Date()).date
     }
 }

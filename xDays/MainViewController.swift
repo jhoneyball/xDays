@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     var targetDate: TargetDate!
     var specialDays: SpecialDays!
