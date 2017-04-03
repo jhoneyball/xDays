@@ -10,7 +10,7 @@ import Foundation
 
 class BadgeControl {
     
-    func update (_ updateTimes: [BadgeUpdateTime], notification: ) {
+    func update (_ updateTimes: BadgeUpdateStore, using notificationHelper: LocalNotificaitonHelper) {
     
 
     }

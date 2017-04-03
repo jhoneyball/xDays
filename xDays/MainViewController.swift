@@ -171,11 +171,11 @@ func countDay(day dayToCheck: Date, specialDays: SpecialDays) -> Bool {
     return true
 }
 
-func setNotifications(until: targetDate.date, with: specialDays) {
+func setNotifications(until target: Date, with specialDays: SpecialDays) {
     
-    badgeUpdateTimes = BadgeUpdateTimes(today: Date(), target: targetDate.date, with: SpecialDays)
-    let badgeControl =
-    SetNewNotifications(arrayOfNotificationBadges)
+    badgeUpdateStore = BadgeUpdateStore(today: Date(), target: targetDate.date, with: SpecialDays)
+    let badgeControl = BadgeControl()
+    BadgeControl.update(badgeUpdateStore, using Notification)
 
 }
 

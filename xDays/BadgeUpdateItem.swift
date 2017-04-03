@@ -8,10 +8,9 @@
 
 import Foundation
 
-struct BadgeUpdateTime {
+struct BadgeUpdateItem {
 
     let notifcationTime: Date
     let badgeNumber: Int
-
 
 }
