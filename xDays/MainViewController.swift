@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
 
     var targetDate: TargetDate!
     var specialDays: SpecialDays!
+    var badgeControl: BadgeControl!
     
 //    @IBAction func daysToCountButton(sender: UIButton) {
 //        
@@ -28,6 +29,7 @@ class MainViewController: UIViewController {
             targetDate.setTargetDate(date: sender.date)
             print ("The date is \(targetDate.date)")
             updateTheDaysToGo(until: targetDate.date, with: specialDays)
+            setNotifications(until: targetDate.date, with: specialDays)
         }
     
     override func viewDidLoad() {
@@ -168,4 +170,15 @@ func countDay(day dayToCheck: Date, specialDays: SpecialDays) -> Bool {
     }
     return true
 }
+
+func setNotifications(until: targetDate.date, with: specialDays) {
+    
+    badgeUpdateTimes = BadgeUpdateTimes(today: Date(), target: targetDate.date, with: SpecialDays)
+    let badgeControl =
+    SetNewNotifications(arrayOfNotificationBadges)
+
+}
+
+
+getArrayOf
 
