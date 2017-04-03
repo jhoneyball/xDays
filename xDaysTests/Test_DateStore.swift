@@ -13,17 +13,17 @@ import XCTest
 class Test_DateStore: XCTestCase {
  
     
-    func testWritingAndReadingObject() {
-    let emptyDateItems = [DateItem]()
-    let initialDateStore = DateStore(allDateItems: emptyDateItems)
+//    func testWritingAndReadingObject() {
+//    let emptyDateItems = [DateItem]()
+//    let initialDateStore = DateStore(allDateItems: emptyDateItems)
     
-    initialDateStore.addItem(DateItem(date: Date(), include: false))
-    initialDateStore.addItem(DateItem(date: Date(), include: true))
+//    initialDateStore.addItem(DateItem(date: Date(), include: false))
+//    initialDateStore.addItem(DateItem(date: Date(), include: true))
         
-    let dateStoreFromDisk = DateStore(fromDisk: true)
+//    let dateStoreFromDisk = DateStore(fromDisk: true)
     
-    XCTAssertEqual(dateStoreFromDisk?.allDateItems[0].getInclude(), false)
-    XCTAssertEqual(dateStoreFromDisk?.allDateItems[1].getInclude(), true)
-    }
+//    XCTAssertEqual(dateStoreFromDisk?.allDateItems[0].getInclude(), false)
+//    XCTAssertEqual(dateStoreFromDisk?.allDateItems[1].getInclude(), true)
+//    }
     
 }

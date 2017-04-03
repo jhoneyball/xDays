@@ -26,4 +26,26 @@ class SimpleDate {
         myFormatter.dateStyle = .medium
         self.asString = myFormatter.string(from: self.date)
     }
+    
+    init? (day: Int, month: Int, year: Int) {
+        self.day = day
+        self.month = month
+        self.year = year
+        
+        
+        var dateComponents = DateComponents()
+        dateComponents.day = day
+        dateComponents.month = month
+        dateComponents.year = year
+
+        let myCalandar = Calendar.current
+        
+        guard let tempDate = myCalandar.date(from: dateComponents) else {
+            return nil
+        }
+        self.date = tempDate
+        let myFormatter = DateFormatter()
+        myFormatter.dateStyle = .medium
+        self.asString = myFormatter.string(from: self.date)
+    }
 }

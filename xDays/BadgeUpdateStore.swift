@@ -14,7 +14,7 @@ class BadgeUpdateStore {
     
     
     init (today: Date, target: Date, with: SpecialDays) {
-        
+        allItems = []
     }
     
 }
