@@ -40,6 +40,8 @@
 		0DB4CF321E92FFD900C7FD84 /* BadgeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF191E92DF3400C7FD84 /* BadgeControl.swift */; };
 		0DB4CF331E92FFD900C7FD84 /* LocalNotificationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF211E92E86A00C7FD84 /* LocalNotificationHelper.swift */; };
 		0DB4CF341E92FFD900C7FD84 /* LocalNotificationHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF1D1E92E28A00C7FD84 /* LocalNotificationHelperProtocol.swift */; };
+		0DB4CF361E943E1A00C7FD84 /* SpecialDaysTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF351E943E1A00C7FD84 /* SpecialDaysTools.swift */; };
+		0DB4CF371E943F6900C7FD84 /* SpecialDaysTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF351E943E1A00C7FD84 /* SpecialDaysTools.swift */; };
 		0DF1C2491E89C02C00C670D1 /* SimpleDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1C2481E89C02C00C670D1 /* SimpleDate.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,7 @@
 		0DB4CF1F1E92E4E900C7FD84 /* BadgeUpdateStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeUpdateStore.swift; sourceTree = "<group>"; };
 		0DB4CF211E92E86A00C7FD84 /* LocalNotificationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelper.swift; sourceTree = "<group>"; };
 		0DB4CF261E92EBCA00C7FD84 /* BadgeUpdateStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeUpdateStoreTests.swift; sourceTree = "<group>"; };
+		0DB4CF351E943E1A00C7FD84 /* SpecialDaysTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecialDaysTools.swift; sourceTree = "<group>"; };
 		0DF1C2481E89C02C00C670D1 /* SimpleDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +150,7 @@
 				0DA48CC41E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift */,
 				0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */,
 				0DA48CBD1E76100700C5A3A1 /* SpecialDays.swift */,
+				0DB4CF351E943E1A00C7FD84 /* SpecialDaysTools.swift */,
 				0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */,
 				0DA48CC61E79F7BC00C5A3A1 /* DateStore.swift */,
 				0DA48CC81E79F8F300C5A3A1 /* DateItem.swift */,
@@ -334,6 +338,7 @@
 				0DA48CC31E78A4E000C5A3A1 /* ExceptionDaysViewController.swift in Sources */,
 				0DB4CF201E92E4E900C7FD84 /* BadgeUpdateStore.swift in Sources */,
 				0DF1C2491E89C02C00C670D1 /* SimpleDate.swift in Sources */,
+				0DB4CF361E943E1A00C7FD84 /* SpecialDaysTools.swift in Sources */,
 				0DA48CC51E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift in Sources */,
 				0DA48CCD1E7EF4DA00C5A3A1 /* TargetDate.swift in Sources */,
 				0DA48CBC1E760E9400C5A3A1 /* DaysToCountViewController.swift in Sources */,
@@ -362,6 +367,7 @@
 				0DB4CF311E92FFD900C7FD84 /* BadgeUpdateStore.swift in Sources */,
 				0DB4CF321E92FFD900C7FD84 /* BadgeControl.swift in Sources */,
 				0DB4CF331E92FFD900C7FD84 /* LocalNotificationHelper.swift in Sources */,
+				0DB4CF371E943F6900C7FD84 /* SpecialDaysTools.swift in Sources */,
 				0DB4CF341E92FFD900C7FD84 /* LocalNotificationHelperProtocol.swift in Sources */,
 				0DB4CF271E92EBCA00C7FD84 /* BadgeUpdateStoreTests.swift in Sources */,
 				0DA48CD11E88442900C5A3A1 /* Test_DateStore.swift in Sources */,

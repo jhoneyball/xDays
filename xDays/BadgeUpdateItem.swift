@@ -10,7 +10,7 @@ import Foundation
 
 struct BadgeUpdateItem {
 
-    let notifcationTime: Date
+    let notificationTime: Date
     let badgeNumber: Int
 
 }
