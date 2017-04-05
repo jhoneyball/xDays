@@ -18,9 +18,9 @@ class BadgeUpdateStore {
         let SecondsIn1Day: TimeInterval = 86400
         let dateTarget = SimpleDate(dateTarget).date
         var dayIterator = SimpleDate(dateTarget).date
+        let dateToday = SimpleDate(dateToday).date
         
-        
-        var badgeNumberToShow = 1
+        var badgeNumberToShow = 0
         
         while dayIterator > dateToday {
             if (SpecialDaysTools.countDay(day: dayIterator,

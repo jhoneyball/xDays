@@ -14,5 +14,14 @@ class BadgeControl {
                                   using notificationHelper: LocalNotificaitonHelperProtocol) {
     
         
+        notificationHelper.ClearCurrentNotifications()
+
+        for badgeUpdateItem in updateTimes.allItems {
+            
+            
+            notificationHelper.addNotification(time: badgeUpdateItem.notificationTime,
+                                               badge: badgeUpdateItem.badgeNumber)
+        }
+        
     }
 }

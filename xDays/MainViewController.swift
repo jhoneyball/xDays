@@ -55,6 +55,7 @@ class MainViewController: UIViewController {
         // let svc = segue.sourceViewController as! TheViewControllerClassYouAreReturningFrom
         // use svc to get mood, action, and place
         updateTheDaysToGo (until: targetDate.date, with: specialDays)
+        setNotifications(until: targetDate.date, with: specialDays)
     }
     
     func updateTheDaysToGo(until toDate: Date, with specialDays: SpecialDays)

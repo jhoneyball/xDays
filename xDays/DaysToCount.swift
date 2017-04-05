@@ -71,7 +71,13 @@ func setCountSundays(_ value: Bool) {
 
 
 //MARK: Initialization
-    init(monday: Bool, tuesday: Bool, wednesday: Bool, thursday: Bool, friday: Bool, saturday: Bool, sunday: Bool) {
+    init(monday: Bool = true,
+         tuesday: Bool = true,
+         wednesday: Bool = true,
+         thursday: Bool = true,
+         friday: Bool = true,
+         saturday: Bool = true,
+         sunday: Bool = true) {
         countMondaysBool = monday
         countTuesdaysBool = tuesday
         countWednesdaysBool = wednesday

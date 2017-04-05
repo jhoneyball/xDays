@@ -11,6 +11,37 @@ import UIKit
 
 class LocalNotificationHelper: LocalNotificaitonHelperProtocol {
     
+    func addNotification(time alertDate: Date, badge xDays: Int) {
+        let taskTypeId = "XDaysToGo"
+        let notification = UILocalNotification()
+        notification.fireDate = alertDate
+        notification.alertBody = "Only \(xDays) days to go"
+        notification.alertAction = "Days : \(xDays)"
+        notification.soundName = UILocalNotificationDefaultSoundName
+        notification.userInfo = ["taskObjectId": taskTypeId]
+        var badge: Int
+        if (xDays == 0) {
+            badge = -1
+        } else {
+            badge = xDays
+        }
+        
+        notification.applicationIconBadgeNumber = badge
+        
+        UIApplication.shared.scheduleLocalNotification(notification)
+        
+        print("Notification set for taskTypeID: \(taskTypeId) at \(alertDate)")
+    }
+    
+    func ClearCurrentNotifications() {
+        
+        // loop through the pending notifications
+        for notification in UIApplication.shared.scheduledLocalNotifications! as [UILocalNotification] {
+            UIApplication.shared.cancelLocalNotification(notification)
+            print("Deletd notifcation")
+        }
+    }
+    
     func checkNotificationEnabled() -> Bool {
         // Check if the user has enabled notifications for this app and return True / False
         guard let settings = UIApplication.shared.currentUserNotificationSettings else { return false}
