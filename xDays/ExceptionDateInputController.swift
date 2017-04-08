@@ -14,6 +14,7 @@ class ExceptionDateInputController: UIViewController  {
     
     @IBAction func touchedDate(_ sender: Any) {
     }
+    
     @IBAction func updateDate(sender: UIDatePicker, forEvent event: UIEvent) {
         let simpleReturnDate = SimpleDate(sender.date)
         dateToReturn = simpleReturnDate.date
@@ -34,5 +35,6 @@ class ExceptionDateInputController: UIViewController  {
     
     override func viewDidLoad() {
         datePicker.date = SimpleDate(Date()).date
+        datePicker.minimumDate = SimpleDate(Date()).date
     }
 }

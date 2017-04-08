@@ -38,6 +38,7 @@ class MainViewController: UIViewController {
         
         updateTheDaysToGo(until: targetDate.date, with: specialDays)
         datePicker.date = targetDate.date
+        datePicker.minimumDate = SimpleDate(Date()).date
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
