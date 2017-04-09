@@ -13,6 +13,4 @@ class UnArchiverNSKeyed: UnArchiving {
     func unArchiveObject (withFile path: String) -> Any? {
         return NSKeyedUnarchiver.unarchiveObject(withFile: path) as Any?
     }
-    
-    
 }

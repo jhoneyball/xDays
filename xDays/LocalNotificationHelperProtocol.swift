@@ -3,7 +3,10 @@ import UIKit
 
 protocol LocalNotificaitonHelperProtocol {
     
-    func addNotification(time: Date, badge: Int)
+    func addNotification(fireDate: Date,
+                         alertBody: String,
+                         alertAction: String,
+                         applicationBadgeNumber: Int)
     func clearCurrentNotifications()
-
+    func printNotifications()
 }

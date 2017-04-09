@@ -27,7 +27,7 @@ class PersistentObjectStorage {
     
 
     func retrieveDaysToCount() -> DaysToCount {
-        var daysToCount = NSKeyedUnarchiver.unarchiveObject(withFile: DaysToCountArchiveURL.path) as? DaysToCount
+        var daysToCount = unArchiver.unArchiveObject(withFile: DaysToCountArchiveURL.path) as? DaysToCount
         if daysToCount != nil {
             print("DaysToCount successfully loaded : \"\(daysToCount!.asString())\"")
         } else {
@@ -37,7 +37,7 @@ class PersistentObjectStorage {
     }
     
     func retrieveExceptionDates() -> ExceptionDates {
-        var exceptionDates = NSKeyedUnarchiver.unarchiveObject(withFile: ExceptionDatesArchiveURL.path) as? ExceptionDates
+        var exceptionDates = unArchiver.unArchiveObject(withFile: ExceptionDatesArchiveURL.path) as? ExceptionDates
         if exceptionDates != nil {
             print("ExceptionDates successfully loaded : \(exceptionDates!.asString())")
         } else {
@@ -47,7 +47,7 @@ class PersistentObjectStorage {
     }
     
     func retrieveTargetDate() -> TargetDate {
-        var targetDate = NSKeyedUnarchiver.unarchiveObject(withFile: TargetDateArchiveURL.path) as? TargetDate
+        var targetDate = unArchiver.unArchiveObject(withFile: TargetDateArchiveURL.path) as? TargetDate
         if targetDate != nil {
             print("TargetDate successfully loaded. \(SimpleDate((targetDate?.date)!).asString)")
         } else {

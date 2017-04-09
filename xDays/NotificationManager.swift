@@ -18,7 +18,7 @@ class NotificationManager {
         let settings = application.currentUserNotificationSettings
         if (settings?.types.contains(.badge) != true) {
             application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
-            application.registerForRemoteNotifications()
+            print("Have registered for notifcations")
         }
         
         let daysToGo = DaysToGo(from: fromDate, to: toDate, with: specialDays).days
@@ -36,6 +36,10 @@ class NotificationManager {
         let notificationHelper = LocalNotificationHelper()
         
         badgeControl.updateBadgeNotifications(with: badgeUpdateStore, using: notificationHelper)
+    }
+    func clearAllNotifications() {
+        let application = UIApplication.shared
+        application.cancelAllLocalNotifications()
     }
 }
 

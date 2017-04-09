@@ -11,37 +11,41 @@ import UIKit
 
 class LocalNotificationHelper: LocalNotificaitonHelperProtocol {
     
-    func addNotification(time alertDate: Date, badge xDays: Int) {
-        let taskTypeId = "XDaysToGo"
+    func addNotification(fireDate: Date,
+                         alertBody: String,
+                         alertAction: String,
+                         applicationBadgeNumber: Int) {
+        //let taskTypeId = "XDaysToGo"
         let notification = UILocalNotification()
-        notification.fireDate = alertDate
-        notification.alertBody = "Only \(xDays) days to go"
-        notification.alertAction = "Days : \(xDays)"
+        notification.fireDate = fireDate
+        notification.alertBody = alertBody
+        notification.alertAction = alertAction
         notification.soundName = UILocalNotificationDefaultSoundName
-        notification.userInfo = ["taskObjectId": taskTypeId]
-        var badge: Int
-        if (xDays == 0) {
-            badge = -1
-        } else {
-            badge = xDays
-        }
-        
-        notification.applicationIconBadgeNumber = badge
-        
+        //notification.userInfo = ["taskObjectId": taskTypeId]
+        notification.applicationIconBadgeNumber = applicationBadgeNumber
         UIApplication.shared.scheduleLocalNotification(notification)
-        
-        print("Notification set for taskTypeID: \(taskTypeId) at \(alertDate)")
     }
     
     func clearCurrentNotifications() {
         
         // loop through the pending notifications
+        let numberOfNotifications = UIApplication.shared.scheduledLocalNotifications!.count
+        print("Deleting \(numberOfNotifications) notifcations")
+        
         for notification in UIApplication.shared.scheduledLocalNotifications! as [UILocalNotification] {
+            print ("Deleting \(notification)")
             UIApplication.shared.cancelLocalNotification(notification)
-            print("Deletd notifcation")
         }
     }
     
+    func printNotifications() {
+        for notification in UIApplication.shared.scheduledLocalNotifications! as [UILocalNotification] {
+            let fireDateStr = SimpleDate(notification.fireDate!).asString
+            let badge = notification.applicationIconBadgeNumber
+            let msgStr = notification.alertBody!
+            print("Notifcation Scheduled: \(fireDateStr) badge: \(badge) msg: \(msgStr)")
+        }
+    }
     func checkNotificationEnabled() -> Bool {
         // Check if the user has enabled notifications for this app and return True / False
         guard let settings = UIApplication.shared.currentUserNotificationSettings else { return false}
@@ -101,14 +105,5 @@ class LocalNotificationHelper: LocalNotificaitonHelperProtocol {
             localNotify?.append(notification)
         }
         return localNotify!
-    }
-    
-    func printNotifications() {
-        
-        print("List of notifications currently set:- ")
-        
-        for notification in UIApplication.shared.scheduledLocalNotifications! as [UILocalNotification] {
-            print ("\(notification)")
-        }
     }
 }

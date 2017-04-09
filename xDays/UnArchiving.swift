@@ -11,7 +11,4 @@ import Foundation
 protocol UnArchiving {
     
     func unArchiveObject (withFile path: String) -> Any?
-    
-    
-    
 }

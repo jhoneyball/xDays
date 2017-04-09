@@ -87,14 +87,12 @@ class BadgeUpdateStoreTests: XCTestCase {
         let sortedBadgeItemArray = sortBadgeItemArray(badgeUpdateStore.allItems)
         
         XCTAssertEqual(1, sortedBadgeItemArray[0].badgeNumber)
-        XCTAssertEqual("Jan 2, 1970", SimpleDate(sortedBadgeItemArray[0].notificationTime).asString)
-        
-        XCTAssertEqual(0, sortedBadgeItemArray[1].badgeNumber)
-        XCTAssertEqual("Jan 3, 1970", SimpleDate(sortedBadgeItemArray[1].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 2, month: .jan, year: 1970)!, SimpleDate(sortedBadgeItemArray[0].notificationTime))
 
-        
+        XCTAssertEqual(0, sortedBadgeItemArray[1].badgeNumber)
+        XCTAssertEqual(SimpleDate(day: 3, month: .jan, year: 1970)!, SimpleDate(sortedBadgeItemArray[1].notificationTime))
     }
-    
+
     func testBadgeUpdateStoreWith3daysAway() {
         
         let specialDays = SpecialDays(daysToCount: countAll7days, exclusionDates: dateStoreWithNoDates)
@@ -104,13 +102,13 @@ class BadgeUpdateStoreTests: XCTestCase {
         let sortedBadgeItemArray = sortBadgeItemArray(badgeUpdateStore.allItems)
 
         XCTAssertEqual(2, sortedBadgeItemArray[0].badgeNumber)
-        XCTAssertEqual("Jan 2, 1970", SimpleDate(sortedBadgeItemArray[0].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 2, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[0].notificationTime))
         
         XCTAssertEqual(1, sortedBadgeItemArray[1].badgeNumber)
-        XCTAssertEqual("Jan 3, 1970", SimpleDate(sortedBadgeItemArray[1].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 3, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[1].notificationTime))
         
         XCTAssertEqual(0, sortedBadgeItemArray[2].badgeNumber)
-        XCTAssertEqual("Jan 4, 1970", SimpleDate(sortedBadgeItemArray[2].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 4, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[2].notificationTime))
     }
     
     func testBadgeUpdateStoreWith4daysAway() {
@@ -122,16 +120,16 @@ class BadgeUpdateStoreTests: XCTestCase {
         let sortedBadgeItemArray = sortBadgeItemArray(badgeUpdateStore.allItems)
         
         XCTAssertEqual(3, sortedBadgeItemArray[0].badgeNumber)
-        XCTAssertEqual("Jan 2, 1970", SimpleDate(sortedBadgeItemArray[0].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 2, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[0].notificationTime))
         
         XCTAssertEqual(2, sortedBadgeItemArray[1].badgeNumber)
-        XCTAssertEqual("Jan 3, 1970", SimpleDate(sortedBadgeItemArray[1].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 3, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[1].notificationTime))
         
         XCTAssertEqual(1, sortedBadgeItemArray[2].badgeNumber)
-        XCTAssertEqual("Jan 4, 1970", SimpleDate(sortedBadgeItemArray[2].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 4, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[2].notificationTime))
         
         XCTAssertEqual(0, sortedBadgeItemArray[3].badgeNumber)
-        XCTAssertEqual("Jan 5, 1970", SimpleDate(sortedBadgeItemArray[3].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 5, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[3].notificationTime))
     }
     
 
@@ -144,13 +142,13 @@ class BadgeUpdateStoreTests: XCTestCase {
         let sortedBadgeItemArray = sortBadgeItemArray(badgeUpdateStore.allItems)
         
         XCTAssertEqual(2, sortedBadgeItemArray[0].badgeNumber)
-        XCTAssertEqual("Jan 2, 1970", SimpleDate(sortedBadgeItemArray[0].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 2, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[0].notificationTime))
         
         XCTAssertEqual(1, sortedBadgeItemArray[1].badgeNumber)
-        XCTAssertEqual("Jan 4, 1970", SimpleDate(sortedBadgeItemArray[1].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 4, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[1].notificationTime))
         
         XCTAssertEqual(0, sortedBadgeItemArray[2].badgeNumber)
-        XCTAssertEqual("Jan 5, 1970", SimpleDate(sortedBadgeItemArray[2].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 5, month: .jan, year: 1970), SimpleDate(sortedBadgeItemArray[2].notificationTime))
     }
     
 
@@ -163,10 +161,10 @@ class BadgeUpdateStoreTests: XCTestCase {
         let sortedBadgeItemArray = sortBadgeItemArray(badgeUpdateStore.allItems)
         
         XCTAssertEqual(25, sortedBadgeItemArray[0].badgeNumber)
-        XCTAssertEqual("Apr 6, 2017", SimpleDate(sortedBadgeItemArray[0].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 6, month: .apr, year: 2017), SimpleDate(sortedBadgeItemArray[0].notificationTime))
 
         XCTAssertEqual(0, sortedBadgeItemArray[25].badgeNumber)
-        XCTAssertEqual("May 11, 2017", SimpleDate(sortedBadgeItemArray[25].notificationTime).asString)
+        XCTAssertEqual(SimpleDate(day: 11, month: .may, year: 2017), SimpleDate(sortedBadgeItemArray[25].notificationTime))
     }
     
     
@@ -175,23 +173,3 @@ class BadgeUpdateStoreTests: XCTestCase {
 func sortBadgeItemArray(_ items: [BadgeUpdateItem]) -> [BadgeUpdateItem] {
     return items.sorted {(lhs: BadgeUpdateItem, rhs: BadgeUpdateItem) -> Bool in return lhs.notificationTime < rhs.notificationTime}
 }
-
-
-
-//
-//    override func tearDown() {
-//        // Put teardown code here. This method is called after the invocation of each test method in the class.
-//        super.tearDown()
-//    }
-//
-//    func testExample() {
-//        // This is an example of a functional test case.
-//        // Use XCTAssert and related functions to verify your tests produce the correct results.
-//    }
-//
-//    func testPerformanceExample() {
-//        // This is an example of a performance test case.
-//        self.measure {
-//            // Put the code you want to measure the time of here.
-//        }
-//    }

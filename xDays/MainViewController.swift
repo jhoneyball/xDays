@@ -24,20 +24,28 @@ class MainViewController: UIViewController {
             targetDate.date = SimpleDate(sender.date).date
             persistentObjectStorage.storeTargetDate(targetDate)
 
-            daysToGo.updateDaysToGo(from: Date(), to: targetDate.date, with: specialDays)
-            xDaysUntilLabel.text = "\(daysToGo.days) Days To Go Until:"
+            updateDaysToGo()
             notificationManager.update(from: Date(), to: targetDate.date, with: specialDays)
         }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        daysToGo = DaysToGo(from: Date(), to: targetDate.date, with: specialDays)
-        xDaysUntilLabel.text = "\(daysToGo.days) Days To Go Until:"
+        updateDaysToGo()
 
         datePicker.date = targetDate.date
         datePicker.minimumDate = SimpleDate(Date()).date
         notificationManager.update(from: Date(), to: targetDate.date, with: specialDays)
+    }
+
+    func updateDaysToGo (goingIntoBackground: Bool = false) {
+        if goingIntoBackground == true {
+            xDaysUntilLabel.text = "  Days To Go Until:"
+        } else {
+            daysToGo = DaysToGo(from: Date(), to: targetDate.date, with: specialDays)
+            xDaysUntilLabel.text = "\(daysToGo.days) Days To Go Until:"
+            notificationManager.update(from: Date(), to: targetDate.date, with: specialDays)
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,8 +62,7 @@ class MainViewController: UIViewController {
         // And we are back
         // let svc = segue.sourceViewController as! TheViewControllerClassYouAreReturningFrom
         // use svc to get mood, action, and place
-        daysToGo.updateDaysToGo(from: Date(), to: targetDate.date, with: specialDays)
-        xDaysUntilLabel.text = "\(daysToGo.days) Days To Go Until:"
+        updateDaysToGo()
         
         notificationManager.update(from: Date(), to: targetDate.date, with: specialDays)
         persistentObjectStorage.storeDaysToCount(specialDays.daysToCount)

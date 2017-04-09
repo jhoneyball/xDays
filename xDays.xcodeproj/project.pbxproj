@@ -22,7 +22,6 @@
 		0DA48CCB1E7EB69700C5A3A1 /* DaysToCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */; };
 		0DA48CCD1E7EF4DA00C5A3A1 /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */; };
 		0DA48CCF1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */; };
-		0DA48CD11E88442900C5A3A1 /* Test_DateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CD01E88442900C5A3A1 /* Test_DateStore.swift */; };
 		0DB4CF1A1E92DF3400C7FD84 /* BadgeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF191E92DF3400C7FD84 /* BadgeControl.swift */; };
 		0DB4CF1C1E92DFE900C7FD84 /* BadgeUpdateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF1B1E92DFE900C7FD84 /* BadgeUpdateItem.swift */; };
 		0DB4CF1E1E92E28A00C7FD84 /* LocalNotificationHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF1D1E92E28A00C7FD84 /* LocalNotificationHelperProtocol.swift */; };
@@ -96,7 +95,6 @@
 		0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysToCount.swift; sourceTree = "<group>"; };
 		0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDate.swift; sourceTree = "<group>"; };
 		0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionDateInputController.swift; sourceTree = "<group>"; };
-		0DA48CD01E88442900C5A3A1 /* Test_DateStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Test_DateStore.swift; sourceTree = "<group>"; };
 		0DB4CF191E92DF3400C7FD84 /* BadgeControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeControl.swift; sourceTree = "<group>"; };
 		0DB4CF1B1E92DFE900C7FD84 /* BadgeUpdateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeUpdateItem.swift; sourceTree = "<group>"; };
 		0DB4CF1D1E92E28A00C7FD84 /* LocalNotificationHelperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotificationHelperProtocol.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				0DA48CA31E75830D00C5A3A1 /* Info.plist */,
-				0DA48CD01E88442900C5A3A1 /* Test_DateStore.swift */,
 				0DB4CF261E92EBCA00C7FD84 /* BadgeUpdateStoreTests.swift */,
 			);
 			path = xDaysTests;
@@ -219,6 +216,7 @@
 		0DD86C641E9A5B4A00C7741E /* ObjectPersistantStorage */ = {
 			isa = PBXGroup;
 			children = (
+				0DD86C771E9ABB8600C7741E /* NSCoderImplementation */,
 				0DD86C611E9A53A600C7741E /* PersistentObjectStorage.swift */,
 				0DD86C651E9A5BBA00C7741E /* Archiving.swift */,
 				0DD86C671E9A5BC400C7741E /* UnArchiving.swift */,
@@ -226,6 +224,13 @@
 				0DD86C6C1E9A5D6200C7741E /* UnArchiverNSKeyed.swift */,
 			);
 			name = ObjectPersistantStorage;
+			sourceTree = "<group>";
+		};
+		0DD86C771E9ABB8600C7741E /* NSCoderImplementation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NSCoderImplementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,7 +419,6 @@
 				0DD86C701E9A61A900C7741E /* UnArchiving.swift in Sources */,
 				0DB4CF341E92FFD900C7FD84 /* LocalNotificationHelperProtocol.swift in Sources */,
 				0DB4CF271E92EBCA00C7FD84 /* BadgeUpdateStoreTests.swift in Sources */,
-				0DA48CD11E88442900C5A3A1 /* Test_DateStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
