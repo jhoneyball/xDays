@@ -12,16 +12,12 @@ class BadgeControl {
     
     func updateBadgeNotifications(with updateTimes: BadgeUpdateStore,
                                   using notificationHelper: LocalNotificaitonHelperProtocol) {
-    
         
-        notificationHelper.ClearCurrentNotifications()
-
+        
+        notificationHelper.clearCurrentNotifications()
         for badgeUpdateItem in updateTimes.allItems {
-            
-            
             notificationHelper.addNotification(time: badgeUpdateItem.notificationTime,
                                                badge: badgeUpdateItem.badgeNumber)
         }
-        
     }
 }

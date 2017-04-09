@@ -26,7 +26,7 @@ class BadgeUpdateStoreTests: XCTestCase {
     var countDaysExceptThursday: DaysToCount!
     var countOnlyWeekdays: DaysToCount!
     
-    var dateStoreWithNoDates: DateStore!
+    var dateStoreWithNoDates: ExceptionDates!
 
     override func setUp() {
         super.setUp()
@@ -45,7 +45,7 @@ class BadgeUpdateStoreTests: XCTestCase {
         count6daysNoSat = DaysToCount(saturday: false)
         countOnlyWeekdays = DaysToCount(saturday: false, sunday: false)
 
-        dateStoreWithNoDates = DateStore(allDateItems: [])
+        dateStoreWithNoDates = ExceptionDates(allDateItems: [])
 
     }
     

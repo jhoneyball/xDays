@@ -45,12 +45,12 @@ class ExceptionDaysController: UIViewController, ModalViewControllerDelegate {
     }
     
     internal func sendValue(dateReturn: Date) {
-        let newDateItem = DateItem(date: dateReturn, include: false)
-        if specialDays.exclusionDates.contains(dateItem: newDateItem) {
+        let newExceptionDate = ExceptionDate(date: dateReturn, include: false)
+        if specialDays.exceptionDates.contains(dateItem: newExceptionDate) {
             // do nothing
         } else {
-            specialDays.exclusionDates.addItem(newDateItem)
-            if let index = specialDays.exclusionDates.allDateItems.index(of: newDateItem) {
+            specialDays.exceptionDates.addItem(newExceptionDate)
+            if let index = specialDays.exceptionDates.allDateItems.index(of: newExceptionDate) {
                 let indexPath = IndexPath(row: index, section: 0)
                 exceptionDaysContainer.tableView.insertRows(at: [indexPath], with: .automatic)
             }

@@ -61,7 +61,7 @@
                                 <rect key="frame" x="126" y="327" width="122" height="30"/>
                                 <state key="normal" title="Exception dates..."/>
                                 <connections>
-                                    <segue destination="pYJ-nT-Xjf" kind="show" identifier="ExceptionDays" id="UV3-kS-OIl"/>
+                                    <segue destination="pYJ-nT-Xjf" kind="show" identifier="ExceptionDates" id="UV3-kS-OIl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -439,7 +439,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="77B-eP-Nea">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>

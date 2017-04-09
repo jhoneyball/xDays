@@ -23,9 +23,7 @@ class BadgeUpdateStore {
         var badgeNumberToShow = 0
         
         while dayIterator > dateToday {
-            if (SpecialDaysTools.countDay(day: dayIterator,
-                                          specialDays: specialDays)) {
-                
+            if (specialDays.countDay(day: dayIterator)) {
                 let badgeUpdateItem = BadgeUpdateItem(notificationTime: dayIterator, badgeNumber: badgeNumberToShow)
                 allItems.append(badgeUpdateItem)
             badgeNumberToShow += 1

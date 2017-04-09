@@ -17,34 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        var daysToCount = DaysToCount(fromDisk: true)
-        if daysToCount == nil {
-            print("Failed to load weekdays to count from disk")
-            daysToCount = DaysToCount(includeWeekends: true)
-        }
-
-        var exclusionDates = DateStore(fromDisk: true)
-        if exclusionDates == nil {
-            print("Failed to load exclusion dates from disk")
-            let emptyDateItems = [DateItem]()
-            exclusionDates = DateStore(allDateItems: emptyDateItems)
-        }
-
-
-        let specialDays = SpecialDays(daysToCount: daysToCount!, exclusionDates: exclusionDates!)
+        let persistentObjectStorage = PersistentObjectStorage(archiver: ArchiverNSKeyed(), unArchiver: UnArchiverNSKeyed())
+        
+        let daysToCount = persistentObjectStorage.retrieveDaysToCount()
+        let exclusionDates = persistentObjectStorage.retrieveExceptionDates()
+        let targetDate = persistentObjectStorage.retrieveTargetDate()
+        let notificationManager = NotificationManager()
+        
+        let specialDays = SpecialDays(daysToCount: daysToCount, exclusionDates: exclusionDates)
         
         let mainViewController = window!.rootViewController as! MainViewController
         mainViewController.specialDays = specialDays
-        
-        
-        let targetDate = TargetDate.loadTargetDate()
-        if targetDate == nil {
-            print("Failed to load target date from disk")
-            mainViewController.targetDate = TargetDate(date: Date())
-        } else {
-            mainViewController.targetDate = targetDate!
-        }
-
+        mainViewController.targetDate = targetDate
+        mainViewController.persistentObjectStorage = persistentObjectStorage
+        mainViewController.notificationManager = notificationManager
         return true
     }
 

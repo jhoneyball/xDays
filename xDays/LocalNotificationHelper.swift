@@ -33,7 +33,7 @@ class LocalNotificationHelper: LocalNotificaitonHelperProtocol {
         print("Notification set for taskTypeID: \(taskTypeId) at \(alertDate)")
     }
     
-    func ClearCurrentNotifications() {
+    func clearCurrentNotifications() {
         
         // loop through the pending notifications
         for notification in UIApplication.shared.scheduledLocalNotifications! as [UILocalNotification] {

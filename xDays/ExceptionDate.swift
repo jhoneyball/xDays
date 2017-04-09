@@ -10,7 +10,7 @@ import UIKit
 import os.log
 import Foundation
 
-class DateItem: NSObject, NSCoding {
+class ExceptionDate: NSObject, NSCoding {
 
     //MARK: Properties
     private var date: Date
@@ -21,7 +21,7 @@ class DateItem: NSObject, NSCoding {
 
     //MARK: Archiving Paths
     private static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-    private static let ArchiveURL = DocumentsDirectory.appendingPathComponent("DateItems")
+    private static let ArchiveURL = DocumentsDirectory.appendingPathComponent("exceptionDate")
 
     //MARK: Types
     
@@ -37,10 +37,6 @@ class DateItem: NSObject, NSCoding {
         self.date = SimpleDate(initDate).date
         self.include = include
 
-    }
-    
-    convenience init(random: Bool) {
-        self.init(date: Date(timeIntervalSince1970: TimeInterval(1489617434)), include: false)
     }
 
     

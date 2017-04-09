@@ -13,39 +13,38 @@ class MainViewController: UIViewController {
     var targetDate: TargetDate!
     var specialDays: SpecialDays!
     var badgeControl: BadgeControl!
-    
-//    @IBAction func daysToCountButton(sender: UIButton) {
-//        
-//    }
-//
-//    @IBAction func exceptionDaysButton(sender: UIButton) {
-//        
-//    }
+    var persistentObjectStorage: PersistentObjectStorage!
+    var daysToGo: DaysToGo!
+    var notificationManager: NotificationManager!
 
     @IBOutlet var xDaysUntilLabel: UILabel!
     @IBOutlet var datePicker:UIDatePicker!
 
     @IBAction func updateDate(sender: UIDatePicker, forEvent event: UIEvent) {
-            targetDate.setTargetDate(date: sender.date)
-            print ("The date is \(targetDate.date)")
-            updateTheDaysToGo(until: targetDate.date, with: specialDays)
-            setNotifications(until: targetDate.date, with: specialDays)
+            targetDate.date = SimpleDate(sender.date).date
+            persistentObjectStorage.storeTargetDate(targetDate)
+
+            daysToGo.updateDaysToGo(from: Date(), to: targetDate.date, with: specialDays)
+            xDaysUntilLabel.text = "\(daysToGo.days) Days To Go Until:"
+            notificationManager.update(from: Date(), to: targetDate.date, with: specialDays)
         }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        updateTheDaysToGo(until: targetDate.date, with: specialDays)
+        daysToGo = DaysToGo(from: Date(), to: targetDate.date, with: specialDays)
+        xDaysUntilLabel.text = "\(daysToGo.days) Days To Go Until:"
+
         datePicker.date = targetDate.date
         datePicker.minimumDate = SimpleDate(Date()).date
+        notificationManager.update(from: Date(), to: targetDate.date, with: specialDays)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DaysToCount" {
                 let daysToCountViewController = segue.destination as! DaysToCountViewController
                 daysToCountViewController.specialDays = specialDays
-        } else if segue.identifier == "ExceptionDays" {
+        } else if segue.identifier == "ExceptionDates" {
                 let exceptionDaysViewController = segue.destination as! ExceptionDaysController
                 exceptionDaysViewController.specialDays = specialDays
         }
@@ -55,44 +54,12 @@ class MainViewController: UIViewController {
         // And we are back
         // let svc = segue.sourceViewController as! TheViewControllerClassYouAreReturningFrom
         // use svc to get mood, action, and place
-        updateTheDaysToGo (until: targetDate.date, with: specialDays)
-        setNotifications(until: targetDate.date, with: specialDays)
+        daysToGo.updateDaysToGo(from: Date(), to: targetDate.date, with: specialDays)
+        xDaysUntilLabel.text = "\(daysToGo.days) Days To Go Until:"
+        
+        notificationManager.update(from: Date(), to: targetDate.date, with: specialDays)
+        persistentObjectStorage.storeDaysToCount(specialDays.daysToCount)
+        persistentObjectStorage.storeExceptionDates(specialDays.exceptionDates)
     }
-    
-    func updateTheDaysToGo(until toDate: Date, with specialDays: SpecialDays)
-    {
-        let application = UIApplication.shared
-        
-        let settings = application.currentUserNotificationSettings
-        if (settings?.types.contains(.badge) != true) {
-            application.registerUserNotificationSettings(UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil))
-            application.registerForRemoteNotifications()
-        }
-        
-        let daysToGo = SpecialDaysTools.daysBetween(Date(), to: targetDate.date, with: specialDays)
-        
-        var badgeNumber: Int
-        if (daysToGo > 0 && daysToGo < 9999) {
-            badgeNumber = daysToGo
-        } else {
-            badgeNumber = 0
-        }
-        application.applicationIconBadgeNumber = badgeNumber
-        xDaysUntilLabel.text = "\(daysToGo) Days To Go Until:"
-    }
-
 }
 
-
-
-
-func setNotifications(until targetDate: Date, with specialDays: SpecialDays) {
-    
-    let badgeUpdateStore = BadgeUpdateStore(today: Date(), target: targetDate, with: specialDays)
-
-    let badgeControl = BadgeControl()
-    let notificationHelper = LocalNotificationHelper()
-    
-    badgeControl.updateBadgeNotifications(with: badgeUpdateStore, using: notificationHelper)
-
-}

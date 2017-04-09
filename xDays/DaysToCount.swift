@@ -9,68 +9,70 @@
 import Foundation
 
 class DaysToCount: NSObject, NSCoding {
-private var countMondaysBool: Bool
-private var countTuesdaysBool: Bool
-private var countWednesdaysBool: Bool
-private var countThursdaysBool: Bool
-private var countFridaysBool: Bool
-private var countSaturdaysBool: Bool
-private var countSundaysBool: Bool
+    private var countMondaysBool: Bool
+    private var countTuesdaysBool: Bool
+    private var countWednesdaysBool: Bool
+    private var countThursdaysBool: Bool
+    private var countFridaysBool: Bool
+    private var countSaturdaysBool: Bool
+    private var countSundaysBool: Bool
+    
+    //MARK: Types
+    struct PropertyKey {
+        static let countMondays = "countMondays"
+        static let countTuesdays = "countTuesdays"
+        static let countWednesdays = "countWednesdays"
+        static let countThursdays = "countThursdays"
+        static let countFridays = "countFridays"
+        static let countSaturdays = "countSaturdays"
+        static let countSundays = "countSundays"
+    }
+    
+    func countMondays() -> Bool {return countMondaysBool}
+    func countTuesdays() -> Bool {return countTuesdaysBool}
+    func countWednesdays() -> Bool {return countWednesdaysBool}
+    func countThursdays() -> Bool {return countThursdaysBool}
+    func countFridays() -> Bool {return countFridaysBool}
+    func countSaturdays() -> Bool {return countSaturdaysBool}
+    func countSundays() -> Bool {return countSundaysBool}
+    
+    func setCountMondays(_ value: Bool) {
+        countMondaysBool = value
+    }
+    func setCountTuesdays(_ value: Bool) {
+        countTuesdaysBool = value
+    }
+    func setCountWednesdays(_ value: Bool) {
+        countWednesdaysBool = value
+    }
+    func setCountThursdays(_ value: Bool) {
+        countThursdaysBool = value
+    }
+    func setCountFridays(_ value: Bool) {
+        countFridaysBool = value
+    }
+    func setCountSaturdays(_ value: Bool) {
+        countSaturdaysBool = value
+    }
+    func setCountSundays(_ value: Bool) {
+        countSundaysBool = value
+    }
 
-//MARK: Archiving Paths
-private static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-private static let ArchiveURL = DocumentsDirectory.appendingPathComponent("specialDays")
-
-//MARK: Types
-struct PropertyKey {
-    static let countMondays = "countMondays"
-    static let countTuesdays = "countTuesdays"
-    static let countWednesdays = "countWednesdays"
-    static let countThursdays = "countThursdays"
-    static let countFridays = "countFridays"
-    static let countSaturdays = "countSaturdays"
-    static let countSundays = "countSundays"
-}
-
-func countMondays() -> Bool {return countMondaysBool}
-func countTuesdays() -> Bool {return countTuesdaysBool}
-func countWednesdays() -> Bool {return countWednesdaysBool}
-func countThursdays() -> Bool {return countThursdaysBool}
-func countFridays() -> Bool {return countFridaysBool}
-func countSaturdays() -> Bool {return countSaturdaysBool}
-func countSundays() -> Bool {return countSundaysBool}
-
-func setCountMondays(_ value: Bool) {
-    countMondaysBool = value
-    saveDaysToCount()
-}
-func setCountTuesdays(_ value: Bool) {
-    countTuesdaysBool = value
-    saveDaysToCount()
-}
-func setCountWednesdays(_ value: Bool) {
-    countWednesdaysBool = value
-    saveDaysToCount()
-}
-func setCountThursdays(_ value: Bool) {
-    countThursdaysBool = value
-    saveDaysToCount()
-}
-func setCountFridays(_ value: Bool) {
-    countFridaysBool = value
-    saveDaysToCount()
-}
-func setCountSaturdays(_ value: Bool) {
-    countSaturdaysBool = value
-    saveDaysToCount()
-}
-func setCountSundays(_ value: Bool) {
-    countSundaysBool = value
-    saveDaysToCount()
-}
-
-
-//MARK: Initialization
+    
+    func asString() -> String {
+        var listOfDays = ""
+        if countMondays() {listOfDays += "Mo"}
+        if countTuesdays() {listOfDays += "Tu"}
+        if countWednesdays() {listOfDays += "We"}
+        if countThursdays() {listOfDays += "Th"}
+        if countFridays() {listOfDays += "Fr"}
+        if countSaturdays() {listOfDays += "Sa"}
+        if countSundays() {listOfDays += "Su"}
+        return listOfDays
+    }
+    
+    
+    //MARK: Initialization
     init(monday: Bool = true,
          tuesday: Bool = true,
          wednesday: Bool = true,
@@ -95,59 +97,29 @@ func setCountSundays(_ value: Bool) {
         }
     }
     
-     convenience init? (fromDisk: Bool){
-        if let temp = NSKeyedUnarchiver.unarchiveObject(withFile: DaysToCount.ArchiveURL.path) as? DaysToCount {
-            self.init(monday: temp.countMondays(),
-                      tuesday: temp.countTuesdays(),
-                      wednesday: temp.countWednesdays(),
-                      thursday: temp.countThursdays(),
-                      friday: temp.countFridays(),
-                      saturday: temp.countSaturdays(),
-                      sunday: temp.countSundays())
-        } else {
-            return nil
-        }
+    //MARK: NSCoding
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(countMondays(), forKey: PropertyKey.countMondays)
+        aCoder.encode(countTuesdays(), forKey: PropertyKey.countTuesdays)
+        aCoder.encode(countWednesdays(), forKey: PropertyKey.countWednesdays)
+        aCoder.encode(countThursdays(), forKey: PropertyKey.countThursdays)
+        aCoder.encode(countFridays(), forKey: PropertyKey.countFridays)
+        aCoder.encode(countSaturdays(), forKey: PropertyKey.countSaturdays)
+        aCoder.encode(countSundays(), forKey: PropertyKey.countSundays)
     }
     
-    
-    
-//MARK: NSCoding
-
-func encode(with aCoder: NSCoder) {
-    aCoder.encode(countMondays(), forKey: PropertyKey.countMondays)
-    aCoder.encode(countTuesdays(), forKey: PropertyKey.countTuesdays)
-    aCoder.encode(countWednesdays(), forKey: PropertyKey.countWednesdays)
-    aCoder.encode(countThursdays(), forKey: PropertyKey.countThursdays)
-    aCoder.encode(countFridays(), forKey: PropertyKey.countFridays)
-    aCoder.encode(countSaturdays(), forKey: PropertyKey.countSaturdays)
-    aCoder.encode(countSundays(), forKey: PropertyKey.countSundays)
-}
-
-required convenience init?(coder aDecoder: NSCoder) {
-    
-    let monday = aDecoder.decodeBool(forKey: PropertyKey.countMondays)
-    let tuesday = aDecoder.decodeBool(forKey: PropertyKey.countTuesdays)
-    let wednesday = aDecoder.decodeBool(forKey: PropertyKey.countWednesdays)
-    let thursday = aDecoder.decodeBool(forKey: PropertyKey.countThursdays)
-    let friday = aDecoder.decodeBool(forKey: PropertyKey.countFridays)
-    let saturday = aDecoder.decodeBool(forKey: PropertyKey.countSaturdays)
-    let sunday = aDecoder.decodeBool(forKey: PropertyKey.countSundays)
-    
-    // Must call designated initializer.
-    self.init(monday: monday, tuesday: tuesday, wednesday: wednesday, thursday: thursday, friday: friday, saturday: saturday, sunday: sunday)
-}
-
-private func saveDaysToCount() {
-    let path = DaysToCount.ArchiveURL.path
-    let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(self, toFile: path)
-    if isSuccessfulSave {
-        print("DaysToCount successfully saved.")
-    } else {
-        print("Failed to save DaysToCount...")
-    }
-}
-
-private func loadDaysToCount() -> DaysToCount?  {
-    return NSKeyedUnarchiver.unarchiveObject(withFile: DaysToCount.ArchiveURL.path) as? DaysToCount
+    required convenience init?(coder aDecoder: NSCoder) {
+        
+        let monday = aDecoder.decodeBool(forKey: PropertyKey.countMondays)
+        let tuesday = aDecoder.decodeBool(forKey: PropertyKey.countTuesdays)
+        let wednesday = aDecoder.decodeBool(forKey: PropertyKey.countWednesdays)
+        let thursday = aDecoder.decodeBool(forKey: PropertyKey.countThursdays)
+        let friday = aDecoder.decodeBool(forKey: PropertyKey.countFridays)
+        let saturday = aDecoder.decodeBool(forKey: PropertyKey.countSaturdays)
+        let sunday = aDecoder.decodeBool(forKey: PropertyKey.countSundays)
+        
+        // Must call designated initializer.
+        self.init(monday: monday, tuesday: tuesday, wednesday: wednesday, thursday: thursday, friday: friday, saturday: saturday, sunday: sunday)
     }
 }
