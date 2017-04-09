@@ -50,7 +50,7 @@
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmZ-1u-sIi">
-                                <rect key="frame" x="133" y="297" width="108" height="30"/>
+                                <rect key="frame" x="133" y="289" width="108" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Days to count..."/>
                                 <connections>
@@ -58,7 +58,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nax-91-wNv">
-                                <rect key="frame" x="126" y="335" width="122" height="30"/>
+                                <rect key="frame" x="126" y="327" width="122" height="30"/>
                                 <state key="normal" title="Exception dates..."/>
                                 <connections>
                                     <segue destination="pYJ-nT-Xjf" kind="show" identifier="ExceptionDays" id="UV3-kS-OIl"/>
@@ -67,15 +67,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QgF-jj-Kh6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="3ek-um-14Q"/>
+                            <constraint firstItem="QgF-jj-Kh6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="53" id="2IY-O8-oMM"/>
                             <constraint firstItem="TmZ-1u-sIi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kb-eq-4bU"/>
-                            <constraint firstItem="TmZ-1u-sIi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CIO-qy-2Ha"/>
+                            <constraint firstItem="7zI-6T-ETn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BUB-2F-uCq"/>
                             <constraint firstItem="QgF-jj-Kh6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DBY-TZ-Hdt"/>
-                            <constraint firstItem="TmZ-1u-sIi" firstAttribute="top" secondItem="QgF-jj-Kh6" secondAttribute="bottom" constant="8" symbolic="YES" id="FcY-11-2Bv"/>
-                            <constraint firstItem="TmZ-1u-sIi" firstAttribute="centerX" secondItem="Nax-91-wNv" secondAttribute="centerX" id="VZr-Z9-Lsy"/>
+                            <constraint firstItem="TmZ-1u-sIi" firstAttribute="top" secondItem="QgF-jj-Kh6" secondAttribute="bottom" id="FcY-11-2Bv"/>
+                            <constraint firstItem="Nax-91-wNv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TTg-bh-SQ4"/>
                             <constraint firstItem="QgF-jj-Kh6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YWF-Ex-ozG"/>
                             <constraint firstItem="Nax-91-wNv" firstAttribute="top" secondItem="TmZ-1u-sIi" secondAttribute="bottom" constant="8" symbolic="YES" id="Zsr-uD-qrT"/>
-                            <constraint firstItem="7zI-6T-ETn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bgA-fV-hZP"/>
                             <constraint firstItem="7zI-6T-ETn" firstAttribute="centerX" secondItem="QgF-jj-Kh6" secondAttribute="centerX" id="zOr-S0-RwJ"/>
                         </constraints>
                     </view>
