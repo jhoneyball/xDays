@@ -59,7 +59,8 @@ class PersistentObjectStorage {
     
     func storeTargetDate(_ targetDate: TargetDate) {
         let path = TargetDateArchiveURL.path
-        let isSuccessfulSave = archiver.archiveRootObject(targetDate, to​File: path)
+        let targetDateNSCoding = TargetDateNSCoding(targetDate)
+        let isSuccessfulSave = archiver.archiveRootObject(targetDateNSCoding, to​File: path)
         if isSuccessfulSave {
             print("TargetDate successfully saved. \(SimpleDate(targetDate.date).asString)")
         } else {

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D9882071E9C251000469DCC /* TargetDateNSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9882061E9C251000469DCC /* TargetDateNSCoding.swift */; };
+		0D9882081E9C251000469DCC /* TargetDateNSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9882061E9C251000469DCC /* TargetDateNSCoding.swift */; };
+		0D98820D1E9C28B300469DCC /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98820C1E9C28B300469DCC /* TargetDate.swift */; };
+		0D98820E1E9C28B300469DCC /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98820C1E9C28B300469DCC /* TargetDate.swift */; };
 		0DA48C8D1E75830D00C5A3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */; };
 		0DA48C8F1E75830D00C5A3A1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48C8E1E75830D00C5A3A1 /* MainViewController.swift */; };
 		0DA48C941E75830D00C5A3A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA48C931E75830D00C5A3A1 /* Assets.xcassets */; };
@@ -20,7 +24,6 @@
 		0DA48CC71E79F7BC00C5A3A1 /* ExceptionDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC61E79F7BC00C5A3A1 /* ExceptionDates.swift */; };
 		0DA48CC91E79F8F300C5A3A1 /* ExceptionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC81E79F8F300C5A3A1 /* ExceptionDate.swift */; };
 		0DA48CCB1E7EB69700C5A3A1 /* DaysToCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */; };
-		0DA48CCD1E7EF4DA00C5A3A1 /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */; };
 		0DA48CCF1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */; };
 		0DB4CF1A1E92DF3400C7FD84 /* BadgeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF191E92DF3400C7FD84 /* BadgeControl.swift */; };
 		0DB4CF1C1E92DFE900C7FD84 /* BadgeUpdateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF1B1E92DFE900C7FD84 /* BadgeUpdateItem.swift */; };
@@ -32,7 +35,6 @@
 		0DB4CF2B1E92FFD900C7FD84 /* DaysToCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */; };
 		0DB4CF2C1E92FFD900C7FD84 /* ExceptionDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC61E79F7BC00C5A3A1 /* ExceptionDates.swift */; };
 		0DB4CF2D1E92FFD900C7FD84 /* ExceptionDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CC81E79F8F300C5A3A1 /* ExceptionDate.swift */; };
-		0DB4CF2E1E92FFD900C7FD84 /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */; };
 		0DB4CF2F1E92FFD900C7FD84 /* SimpleDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1C2481E89C02C00C670D1 /* SimpleDate.swift */; };
 		0DB4CF301E92FFD900C7FD84 /* BadgeUpdateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF1B1E92DFE900C7FD84 /* BadgeUpdateItem.swift */; };
 		0DB4CF311E92FFD900C7FD84 /* BadgeUpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB4CF1F1E92E4E900C7FD84 /* BadgeUpdateStore.swift */; };
@@ -74,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D9882061E9C251000469DCC /* TargetDateNSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDateNSCoding.swift; sourceTree = "<group>"; };
+		0D98820C1E9C28B300469DCC /* TargetDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDate.swift; sourceTree = "<group>"; };
 		0DA48C891E75830D00C5A3A1 /* xDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA48C8E1E75830D00C5A3A1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +97,6 @@
 		0DA48CC61E79F7BC00C5A3A1 /* ExceptionDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionDates.swift; sourceTree = "<group>"; };
 		0DA48CC81E79F8F300C5A3A1 /* ExceptionDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionDate.swift; sourceTree = "<group>"; };
 		0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysToCount.swift; sourceTree = "<group>"; };
-		0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDate.swift; sourceTree = "<group>"; };
 		0DA48CCE1E7F4AFF00C5A3A1 /* ExceptionDateInputController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExceptionDateInputController.swift; sourceTree = "<group>"; };
 		0DB4CF191E92DF3400C7FD84 /* BadgeControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeControl.swift; sourceTree = "<group>"; };
 		0DB4CF1B1E92DFE900C7FD84 /* BadgeUpdateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeUpdateItem.swift; sourceTree = "<group>"; };
@@ -170,8 +173,8 @@
 				0DA48CBD1E76100700C5A3A1 /* SpecialDays.swift */,
 				0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */,
 				0DA48CC61E79F7BC00C5A3A1 /* ExceptionDates.swift */,
+				0D98820C1E9C28B300469DCC /* TargetDate.swift */,
 				0DA48CC81E79F8F300C5A3A1 /* ExceptionDate.swift */,
-				0DA48CCC1E7EF4DA00C5A3A1 /* TargetDate.swift */,
 				0DF1C2481E89C02C00C670D1 /* SimpleDate.swift */,
 				0DB4CF231E92EA8900C7FD84 /* Notifications */,
 				0DA48CBF1E78A2C600C5A3A1 /* Main.storyboard */,
@@ -229,6 +232,7 @@
 		0DD86C771E9ABB8600C7741E /* NSCoderImplementation */ = {
 			isa = PBXGroup;
 			children = (
+				0D9882061E9C251000469DCC /* TargetDateNSCoding.swift */,
 			);
 			name = NSCoderImplementation;
 			sourceTree = "<group>";
@@ -370,10 +374,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA48CCB1E7EB69700C5A3A1 /* DaysToCount.swift in Sources */,
+				0D98820D1E9C28B300469DCC /* TargetDate.swift in Sources */,
 				0DD86C621E9A53A600C7741E /* PersistentObjectStorage.swift in Sources */,
 				0DD86C6D1E9A5D6200C7741E /* UnArchiverNSKeyed.swift in Sources */,
 				0DA48C8F1E75830D00C5A3A1 /* MainViewController.swift in Sources */,
 				0DA48CC71E79F7BC00C5A3A1 /* ExceptionDates.swift in Sources */,
+				0D9882071E9C251000469DCC /* TargetDateNSCoding.swift in Sources */,
 				0DA48CC31E78A4E000C5A3A1 /* ExceptionDaysViewController.swift in Sources */,
 				0DD86C751E9A84F900C7741E /* NotificationManager.swift in Sources */,
 				0DD86C661E9A5BBA00C7741E /* Archiving.swift in Sources */,
@@ -382,7 +388,6 @@
 				0DA48CC51E79F0F400C5A3A1 /* ExceptionDatesContainerTableController.swift in Sources */,
 				0DD86C681E9A5BC400C7741E /* UnArchiving.swift in Sources */,
 				0DD86C721E9A82FF00C7741E /* DaysToGo.swift in Sources */,
-				0DA48CCD1E7EF4DA00C5A3A1 /* TargetDate.swift in Sources */,
 				0DA48CBC1E760E9400C5A3A1 /* DaysToCountViewController.swift in Sources */,
 				0DD86C6A1E9A5D3300C7741E /* ArchiverNSKeyed.swift in Sources */,
 				0DB4CF221E92E86A00C7FD84 /* LocalNotificationHelper.swift in Sources */,
@@ -400,12 +405,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D9882081E9C251000469DCC /* TargetDateNSCoding.swift in Sources */,
 				0DB4CF2A1E92FFD900C7FD84 /* SpecialDays.swift in Sources */,
 				0DB4CF2B1E92FFD900C7FD84 /* DaysToCount.swift in Sources */,
 				0DD86C761E9A84F900C7741E /* NotificationManager.swift in Sources */,
 				0DB4CF2C1E92FFD900C7FD84 /* ExceptionDates.swift in Sources */,
 				0DB4CF2D1E92FFD900C7FD84 /* ExceptionDate.swift in Sources */,
-				0DB4CF2E1E92FFD900C7FD84 /* TargetDate.swift in Sources */,
 				0DD86C731E9A82FF00C7741E /* DaysToGo.swift in Sources */,
 				0DB4CF2F1E92FFD900C7FD84 /* SimpleDate.swift in Sources */,
 				0DB4CF301E92FFD900C7FD84 /* BadgeUpdateItem.swift in Sources */,
@@ -416,6 +421,7 @@
 				0DD86C6F1E9A61A600C7741E /* Archiving.swift in Sources */,
 				0DD86C6E1E9A5D6200C7741E /* UnArchiverNSKeyed.swift in Sources */,
 				0DD86C631E9A53AE00C7741E /* PersistentObjectStorage.swift in Sources */,
+				0D98820E1E9C28B300469DCC /* TargetDate.swift in Sources */,
 				0DD86C701E9A61A900C7741E /* UnArchiving.swift in Sources */,
 				0DB4CF341E92FFD900C7FD84 /* LocalNotificationHelperProtocol.swift in Sources */,
 				0DB4CF271E92EBCA00C7FD84 /* BadgeUpdateStoreTests.swift in Sources */,

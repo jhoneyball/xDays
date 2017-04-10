@@ -100,7 +100,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzk-Sw-fBS">
-                                <rect key="frame" x="16" y="617" width="37" height="30"/>
+                                <rect key="frame" x="16" y="587" width="80" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7w1-H2-tVA"/>
+                                    <constraint firstAttribute="height" constant="60" id="rcv-Si-Ivd"/>
+                                </constraints>
                                 <state key="normal" title="Done"/>
                                 <connections>
                                     <segue destination="7zO-qd-r8Z" kind="unwind" unwindAction="unwindToHereWithSegue:" id="cIu-Ee-QnF"/>
@@ -273,7 +277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DcD-qc-dm0" userLabel="Header View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="8" width="375" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLJ-Nf-hl4">
                                         <rect key="frame" x="8" y="15" width="100" height="30"/>
@@ -306,12 +310,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNG-Ua-AkV" userLabel="Footer View">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="599" width="375" height="68"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdw-Zy-czZ">
-                                        <rect key="frame" x="8" y="21" width="46" height="30"/>
+                                        <rect key="frame" x="8" y="8" width="80" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="46" id="GrX-AS-O1q"/>
+                                            <constraint firstAttribute="width" constant="80" id="GrX-AS-O1q"/>
+                                            <constraint firstAttribute="height" constant="44" id="x0T-Ye-J0n"/>
                                         </constraints>
                                         <state key="normal" title="Done"/>
                                         <connections>
@@ -322,11 +327,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="sdw-Zy-czZ" firstAttribute="leading" secondItem="eNG-Ua-AkV" secondAttribute="leadingMargin" id="Gg1-Hf-bom"/>
-                                    <constraint firstItem="sdw-Zy-czZ" firstAttribute="top" secondItem="eNG-Ua-AkV" secondAttribute="top" constant="21" id="bEH-vD-goE"/>
+                                    <constraint firstItem="sdw-Zy-czZ" firstAttribute="top" secondItem="eNG-Ua-AkV" secondAttribute="top" constant="8" id="bEH-vD-goE"/>
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRk-1d-UOE">
-                                <rect key="frame" x="0.0" y="60" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="68" width="375" height="531"/>
                                 <connections>
                                     <segue destination="Vqf-Sq-gtZ" kind="embed" identifier="ExceptionDatesContainer" id="VWg-o6-Ibk"/>
                                 </connections>
@@ -342,7 +347,7 @@
                             <constraint firstItem="nRk-1d-UOE" firstAttribute="top" secondItem="DcD-qc-dm0" secondAttribute="bottom" id="QG6-RG-g7g"/>
                             <constraint firstItem="DcD-qc-dm0" firstAttribute="trailing" secondItem="nRk-1d-UOE" secondAttribute="trailing" id="W44-q6-XHs"/>
                             <constraint firstItem="nRk-1d-UOE" firstAttribute="leading" secondItem="eNG-Ua-AkV" secondAttribute="leading" id="YRo-5a-nEG"/>
-                            <constraint firstItem="DcD-qc-dm0" firstAttribute="top" secondItem="coW-8r-3gA" secondAttribute="top" id="Yde-Jl-h2a"/>
+                            <constraint firstItem="DcD-qc-dm0" firstAttribute="top" secondItem="coW-8r-3gA" secondAttribute="top" constant="8" id="Yde-Jl-h2a"/>
                             <constraint firstAttribute="trailing" secondItem="DcD-qc-dm0" secondAttribute="trailing" id="Znt-jI-RAl"/>
                             <constraint firstItem="nRk-1d-UOE" firstAttribute="trailing" secondItem="eNG-Ua-AkV" secondAttribute="trailing" id="qIG-U3-Xx7"/>
                         </constraints>
@@ -351,7 +356,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AS-fA-DxR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6Lz-K0-BEE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="793" y="880"/>
+            <point key="canvasLocation" x="792.79999999999995" y="879.31034482758628"/>
         </scene>
         <!--Exception Date Input Controller-->
         <scene sceneID="lPy-2I-Vne">
@@ -427,7 +432,7 @@
             <objects>
                 <tableViewController id="Vqf-Sq-gtZ" userLabel="Exception Dates Table Controller" customClass="ExceptionDatesContainerTableController" customModule="xDays" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="oRU-At-33I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="531"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
