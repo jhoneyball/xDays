@@ -6,7 +6,7 @@
 //  Copyright © 2017 James Honeyball. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class ExceptionDates:  NSObject, NSCoding {
     

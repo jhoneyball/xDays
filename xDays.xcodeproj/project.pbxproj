@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D9882071E9C251000469DCC /* TargetDateNSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9882061E9C251000469DCC /* TargetDateNSCoding.swift */; };
-		0D9882081E9C251000469DCC /* TargetDateNSCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9882061E9C251000469DCC /* TargetDateNSCoding.swift */; };
 		0D98820D1E9C28B300469DCC /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98820C1E9C28B300469DCC /* TargetDate.swift */; };
 		0D98820E1E9C28B300469DCC /* TargetDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D98820C1E9C28B300469DCC /* TargetDate.swift */; };
 		0DA48C8D1E75830D00C5A3A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */; };
@@ -76,7 +74,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D9882061E9C251000469DCC /* TargetDateNSCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDateNSCoding.swift; sourceTree = "<group>"; };
 		0D98820C1E9C28B300469DCC /* TargetDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetDate.swift; sourceTree = "<group>"; };
 		0DA48C891E75830D00C5A3A1 /* xDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA48C8C1E75830D00C5A3A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,8 +170,8 @@
 				0DA48CBD1E76100700C5A3A1 /* SpecialDays.swift */,
 				0DA48CCA1E7EB69700C5A3A1 /* DaysToCount.swift */,
 				0DA48CC61E79F7BC00C5A3A1 /* ExceptionDates.swift */,
-				0D98820C1E9C28B300469DCC /* TargetDate.swift */,
 				0DA48CC81E79F8F300C5A3A1 /* ExceptionDate.swift */,
+				0D98820C1E9C28B300469DCC /* TargetDate.swift */,
 				0DF1C2481E89C02C00C670D1 /* SimpleDate.swift */,
 				0DB4CF231E92EA8900C7FD84 /* Notifications */,
 				0DA48CBF1E78A2C600C5A3A1 /* Main.storyboard */,
@@ -219,7 +216,6 @@
 		0DD86C641E9A5B4A00C7741E /* ObjectPersistantStorage */ = {
 			isa = PBXGroup;
 			children = (
-				0DD86C771E9ABB8600C7741E /* NSCoderImplementation */,
 				0DD86C611E9A53A600C7741E /* PersistentObjectStorage.swift */,
 				0DD86C651E9A5BBA00C7741E /* Archiving.swift */,
 				0DD86C671E9A5BC400C7741E /* UnArchiving.swift */,
@@ -227,14 +223,6 @@
 				0DD86C6C1E9A5D6200C7741E /* UnArchiverNSKeyed.swift */,
 			);
 			name = ObjectPersistantStorage;
-			sourceTree = "<group>";
-		};
-		0DD86C771E9ABB8600C7741E /* NSCoderImplementation */ = {
-			isa = PBXGroup;
-			children = (
-				0D9882061E9C251000469DCC /* TargetDateNSCoding.swift */,
-			);
-			name = NSCoderImplementation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,7 +367,6 @@
 				0DD86C6D1E9A5D6200C7741E /* UnArchiverNSKeyed.swift in Sources */,
 				0DA48C8F1E75830D00C5A3A1 /* MainViewController.swift in Sources */,
 				0DA48CC71E79F7BC00C5A3A1 /* ExceptionDates.swift in Sources */,
-				0D9882071E9C251000469DCC /* TargetDateNSCoding.swift in Sources */,
 				0DA48CC31E78A4E000C5A3A1 /* ExceptionDaysViewController.swift in Sources */,
 				0DD86C751E9A84F900C7741E /* NotificationManager.swift in Sources */,
 				0DD86C661E9A5BBA00C7741E /* Archiving.swift in Sources */,
@@ -405,7 +392,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D9882081E9C251000469DCC /* TargetDateNSCoding.swift in Sources */,
 				0DB4CF2A1E92FFD900C7FD84 /* SpecialDays.swift in Sources */,
 				0DB4CF2B1E92FFD900C7FD84 /* DaysToCount.swift in Sources */,
 				0DD86C761E9A84F900C7741E /* NotificationManager.swift in Sources */,

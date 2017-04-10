@@ -8,12 +8,27 @@
 
 import Foundation
 
-class TargetDate {
+class TargetDate: NSObject, NSCoding {
 
     var date: Date
     
     init(date: Date) {
         self.date = SimpleDate(date).date
+    }
+
+
+    //MARK: - NSCoding
+    struct PropertyKey {
+        static let date = "date"
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(date, forKey: PropertyKey.date)
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        let date = aDecoder.decodeObject(forKey: PropertyKey.date) as! Date
+        self.init(date: date)
     }
 }
 

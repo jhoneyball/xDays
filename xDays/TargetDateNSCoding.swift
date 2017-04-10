@@ -18,21 +18,6 @@ class TargetDateNSCoding: TargetDate, NSCoding {
         super.init(date: date)
     }
     
-    //MARK: Types
-    
-    struct PropertyKey {
-        static let date = "date"
-    }
-    
-    //MARK: NSCoding
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(date, forKey: PropertyKey.date)
-    }
 
-    required convenience init?(coder aDecoder: NSCoder) {
-        let date = aDecoder.decodeObject(forKey: PropertyKey.date) as! Date
-        self.init(date: date)
-    }
     
 }
