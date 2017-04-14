@@ -76,7 +76,6 @@ class SpecialDays {
     func daysBetween(_ fromDate: Date, to toDate: Date) -> Int {
         
         let calendar = Calendar.current
-        let SecondsIn1Day: TimeInterval = 86400
         var day = calendar.component(.day, from: fromDate)
         var month = calendar.component(.month, from: fromDate)
         var year = calendar.component(.year, from: fromDate)
@@ -104,7 +103,7 @@ class SpecialDays {
             if countDay(day: dateToExamine) {
                 dayCount = dayCount + 1
             }
-            dateToExamine.addTimeInterval(SecondsIn1Day)
+            dateToExamine = Calendar.current.date(byAdding: .day, value: 1, to: dateToExamine)!
         }
         return dayCount
     }

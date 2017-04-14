@@ -8,9 +8,15 @@
 
 import Foundation
 
-struct BadgeUpdateItem {
+struct BadgeUpdateItem: Equatable
+{
 
     let notificationTime: Date
     let badgeNumber: Int
 
+    static func == (lhs: BadgeUpdateItem, rhs: BadgeUpdateItem) -> Bool {
+        return
+            lhs.notificationTime == rhs.notificationTime &&
+                lhs.badgeNumber == rhs.badgeNumber
+    }
 }

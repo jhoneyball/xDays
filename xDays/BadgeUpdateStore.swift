@@ -15,21 +15,23 @@ class BadgeUpdateStore {
     
     init (today dateToday: Date, target dateTarget: Date, with specialDays: SpecialDays) {
         allItems = []
-        let SecondsIn1Day: TimeInterval = 86400
+
         let dateTarget = SimpleDate(dateTarget).date
-        var dayIterator = SimpleDate(dateTarget).date
-        let dateToday = SimpleDate(dateToday).date
-        
-        var badgeNumberToShow = 0
-        
-        while dayIterator > dateToday {
-            if (specialDays.countDay(day: dayIterator)) {
-                let badgeUpdateItem = BadgeUpdateItem(notificationTime: dayIterator, badgeNumber: badgeNumberToShow)
+        var badgeUpdateItem: BadgeUpdateItem
+
+        let dayTomorrow = SimpleDate(Calendar.current.date(byAdding: .day, value: 1, to: dateToday)!).date
+        var dayIterator = SimpleDate(dayTomorrow).date //Notificaiton changes begin tomorrow
+
+        var daysToGo: DaysToGo
+        var badgeNumberToShow: Int = -1
+        while dayIterator <= dateTarget {
+            daysToGo = DaysToGo(from: dayIterator, to: dateTarget, with: specialDays)
+            if daysToGo.days != badgeNumberToShow {
+                badgeNumberToShow = daysToGo.days
+                badgeUpdateItem = BadgeUpdateItem(notificationTime: SimpleDate(dayIterator).date, badgeNumber: badgeNumberToShow)
                 allItems.append(badgeUpdateItem)
-            badgeNumberToShow += 1
             }
-            dayIterator.addTimeInterval(0 - SecondsIn1Day)
+            dayIterator = Calendar.current.date(byAdding: .day, value: 1, to: dayIterator)!
         }
     }
-    
 }
