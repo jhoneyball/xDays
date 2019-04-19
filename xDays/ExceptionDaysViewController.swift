@@ -36,7 +36,7 @@ class ExceptionDaysController: UIViewController, ModalViewControllerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ExceptionDatesContainer" {
-            exceptionDaysContainer = segue.destination as! ExceptionDatesContainerTableController
+            exceptionDaysContainer = segue.destination as? ExceptionDatesContainerTableController
             exceptionDaysContainer.specialDays = specialDays
         } else if segue.identifier == "ExceptionDateInputController" {
             let exceptionDateInputController = segue.destination as! ExceptionDateInputController
@@ -50,7 +50,7 @@ class ExceptionDaysController: UIViewController, ModalViewControllerDelegate {
             // do nothing
         } else {
             specialDays.exceptionDates.addItem(newExceptionDate)
-            if let index = specialDays.exceptionDates.allDateItems.index(of: newExceptionDate) {
+            if let index = specialDays.exceptionDates.allDateItems.firstIndex(of: newExceptionDate) {
                 let indexPath = IndexPath(row: index, section: 0)
                 exceptionDaysContainer.tableView.insertRows(at: [indexPath], with: .automatic)
             }

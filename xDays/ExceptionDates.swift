@@ -45,7 +45,7 @@ class ExceptionDates:  NSObject, NSCoding {
     }
 
     func removeItem(_ item: ExceptionDate) {
-        if let index = allDateItems.index(of: item) {
+        if let index = allDateItems.firstIndex(of: item) {
             allDateItems.remove(at: index)
         }
     }

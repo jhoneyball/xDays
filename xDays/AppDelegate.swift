@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var mainViewController: MainViewController!
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         let persistentObjectStorage = PersistentObjectStorage(archiver: ArchiverNSKeyed(), unArchiver: UnArchiverNSKeyed())
@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let specialDays = SpecialDays(daysToCount: daysToCount, exclusionDates: exclusionDates)
         
-        mainViewController = window!.rootViewController as! MainViewController
+        mainViewController = window!.rootViewController as? MainViewController
         mainViewController.specialDays = specialDays
         mainViewController.targetDate = targetDate
         mainViewController.persistentObjectStorage = persistentObjectStorage
